@@ -1,11 +1,47 @@
 <script>
 	import '../app.postcss';
+	import { DarkMode } from 'flowbite-svelte';
+	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
+	import { Footer, FooterLinkGroup, FooterLink, FooterCopyright } from 'flowbite-svelte';
+	import { page } from '$app/stores';
 </script>
 
-<header class="bg-bsiorange text-white">Header</header>
+<Navbar let:hidden let:toggle>
+	<NavBrand href="/">
+		<img
+			src="https://flowbite.com/docs/images/logo.svg"
+			class="mr-3 h-6 sm:h-9"
+			alt="Flowbite Logo"
+		/>
+		<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+			Syaria Banking Learn
+		</span>
+	</NavBrand>
+	<div class="flex md:order-2">
+		<DarkMode />
+		<NavHamburger on:click={toggle} />
+	</div>
+	<NavUl
+		{hidden}
+		activeClass="text-white font-bold bg-green-700 md:bg-transparent md:text-green-700 md:dark:text-white dark:bg-green-600 md:dark:bg-transparent"
+		nonActiveClass="text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+	>
+		<NavLi active={$page.url.pathname == '/'} href="/">Home</NavLi>
+		<NavLi active={$page.url.pathname == '/courses'} href="/courses">Courses</NavLi>
+		<NavLi active={$page.url.pathname == '/about'} href="/about">About</NavLi>
+	</NavUl>
+</Navbar>
 
-<div class="m-5">
+<div class="container mx-auto px-2 sm:px-4 py-2.5 w-full">
 	<slot />
 </div>
 
-<footer class="bg-bsiorange text-white">Footer</footer>
+<Footer class="dark:bg-gray-900 mt-auto">
+	<FooterCopyright href="/" by="August" year={2023} />
+	<FooterLinkGroup
+		ulClass="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
+	>
+		<FooterLink href="/about">About</FooterLink>
+		<FooterLink href="/contact">Contact</FooterLink>
+	</FooterLinkGroup>
+</Footer>
