@@ -9,7 +9,7 @@
 	<Heading tag="h1" class="text-green-600 dark:text-green-600 text-3xl mb-5">
 		Selamat Datang<br />di Sharia Banking Learn
 	</Heading>
-	<P class="dark:text-gray-400 text-center">Platform edukasi perbankan syariah</P>
+	<P class="dark:text-gray-400 text-center">Sumber Belajar Digital Perbankan Syariah</P>
 </div>
 <div class="flex flex-col gap-5 text-center [&>div>h2]:text-2xl [&>div>P]:text-center">
 	<div
@@ -45,7 +45,7 @@
 <div
 	class="flex flex-col text-center gap-3 md:gap-0 md:text-left md:flex-row items-center my-5 p-5 bg-white dark:bg-gray-800 rounded-lg border-2 border-green-500 dark:border-gray-700 shadow-md"
 >
-	<Heading tag="h3" customSize="text-lg font-bold"
+	<Heading tag="h3" customSize="text-lg font-semibold"
 		>Tertarik memahami perbankan syariah lebih lanjut?</Heading
 	>
 	<Button color="green" href="/courses">Mulai&nbsp;Belajar</Button>
