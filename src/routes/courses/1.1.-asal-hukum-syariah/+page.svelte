@@ -10,7 +10,7 @@
 </Breadcrumb>
 
 <h1 class="capitalize text-2xl text-green-500 font-bold dark:text-white mb-1">
-	1.1 asal hukum syariah
+	1.1. asal hukum syariah
 </h1>
 <Parag>
 	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, impedit in. Impedit expedita

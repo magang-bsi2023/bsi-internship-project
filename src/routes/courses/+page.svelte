@@ -39,7 +39,7 @@
 				class="-mx-1 -my-5 divide-y dark:divide-gray-500 [&>*]:py-3 [&>div>a]:text-green-500 hover:[&>div>a]:underline hover:[&>div>a]:text-green-500"
 			>
 				<div>
-					<a href="/courses/1.1.asal-hukum-syariah">1.1. Asal Hukum Syariah</a>
+					<a href="/courses/1.1.-asal-hukum-syariah">1.1. Asal Hukum Syariah</a>
 				</div>
 				<div>
 					<a href="/courses/judul2">Judul 2</a>
