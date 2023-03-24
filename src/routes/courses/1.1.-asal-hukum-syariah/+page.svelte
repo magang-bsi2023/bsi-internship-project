@@ -1,6 +1,7 @@
 <script>
 	import { Breadcrumb, BreadcrumbItem, Button } from 'flowbite-svelte';
 	import Parag from '$lib/components/Parag.svelte';
+	import Iframe from '$lib/components/Iframe.svelte';
 </script>
 
 <Breadcrumb class="mb-5" aria-label="Solid background breadcrumb" solid>
@@ -18,29 +19,9 @@
 	neque quidem placeat cupiditate fuga?
 </Parag>
 
-<div
-	class="video-container my-5 border bg-gray-50 dark:bg-gray-800 rounded-lg border-gray-200 dark:border-gray-700"
->
-	<div class="iframe-container">
-		<iframe
-			title="video1"
-			class="responsive-iframe"
-			src="https://drive.google.com/file/d/1-9ZKjicBRw0ysRC_sjFhi0BUonOz0wIu/preview"
-		/>
-	</div>
-</div>
+<Iframe title="video1" src="https://drive.google.com/file/d/1-9ZKjicBRw0ysRC_sjFhi0BUonOz0wIu/preview"></Iframe>
 
-<div
-	class="video-container my-5 border bg-gray-50 dark:bg-gray-800 rounded-lg border-gray-200 dark:border-gray-700"
->
-	<div class="iframe-container">
-		<iframe
-			title="multimedia1"
-			class="responsive-iframe"
-			src="https://augussst.github.io/AS-LuasdanVolume-BangunRuang/"
-		/>
-	</div>
-</div>
+<Iframe title="interactive1" src="https://augussst.github.io/AS-LuasdanVolume-BangunRuang/"></Iframe>
 
 <div class="flex justify-around">
 	<Button
@@ -83,28 +64,3 @@
 		</svg>
 	</Button>
 </div>
-
-<style global lang="postcss">
-	.video-container {
-		max-width: 1250px;
-		margin-inline: auto;
-		padding: 1.5rem;
-	}
-	.iframe-container {
-		position: relative;
-		overflow: hidden;
-		width: 100%;
-		padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-	}
-
-	/* Then style the iframe to fit in the container div with full height and width */
-	.responsive-iframe {
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
