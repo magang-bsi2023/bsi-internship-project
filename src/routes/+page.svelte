@@ -15,34 +15,30 @@
 	<div
 		class="p-5 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md"
 	>
-		<Heading tag="h2">Apa itu sharia banking?</Heading>
+		<Heading tag="h2">Apa itu Sharia Banking?</Heading>
 		<P
-			>Sharia banking atau perbangkan syariah adalah Lorem ipsum dolor sit amet consectetur
-			adipisicing elit. Temporibus, explicabo! Voluptatem consectetur maxime est vero, iusto non
-			dolores amet molestias, nostrum expedita exercitationem harum earum et unde adipisci ad sequi?</P
+			>Sharia banking atau perbankan syariah adalah segala sesuatu mengenai bank yang sesuai dengan hukum-hukum Islam. Implementasi prinsip syariah inilah yang menjadi pembeda utama dengan bank konvensional.  Pada intinya prinsip  syariah tersebut mengacu kepada syariah Islam yang berpedoman utama kepada Al-Quran dan Hadist. Islam sebagai agama merupakan konsep yang mengatur kehidupan manusia secara komprehensif dan universal baik dalam hubungan dengan Sang Pencipta (HabluminAllah) maupun dalam hubungan sesama manusia (Hablumminannas).</P
 		>
 	</div>
 	<div
 		class="p-5 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md"
 	>
-		<Heading tag="h2">Mengapa kita harus belajar sharia banking?</Heading>
+		<Heading tag="h2">Mengapa kita harus belajar Sharia Banking?</Heading>
 		<P
-			>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolores laborum soluta
-			perferendis neque. Temporibus officiis laboriosam doloremque, quae atque maxime amet
-			laudantium laborum ducimus. Facilis qui tempore unde sapiente!</P
+			>Sebagai Muslim, kita harus memahami aturan-aturan dan prinsip-prinsip perbankan yang sesuai dengan syariat Islam agar kita terhindari dari hal-hal yang dapat memberikan keburukan karena tidak sesuai dengan syariat Islam. Dengan memahami perbankan syariah, diharapkan kita dapat mulai mengikuti syariat-syariatnya dengan menggunakan bank syariah.</P
 		>
 	</div>
 </div>
 
 <figure class="mx-auto max-w-screen-md text-center my-5">
 	<Blockquote class="mb-3" alignment="center" size="2xl">
-		فَاَوْفُوا الْكَيْلَ وَالْمِيْزَانَ وَلَا تَبْخَسُوا النَّاسَ اَشْيَاۤءَهُمْ
+		يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱدْخُلُوا۟ فِى ٱلسِّلْمِ كَآفَّةً وَلَا تَتَّبِعُوا۟ خُطُوَٰتِ ٱلشَّيْطَٰنِ ۚ إِنَّهُۥ لَكُمْ عَدُوٌّ مُّبِينٌ
 	</Blockquote>
 	<Blockquote alignment="center" size="lg">
-		“Sempurnakanlah takaran dan timbangan, dan jangan kamu merugikan orang sedikit pun.”
+		“Wahai orang-orang yang beriman! Masuklah ke dalam Islam secara keseluruhan, dan janganlah kamu ikuti langkah-langkah setan. Sungguh, ia musuh yang nyata bagimu.”
 	</Blockquote>
 	<figcaption class="flex justify-center items-center mt-3 space-x-3">
-		(Qs. Al’A’raf: 85).
+		<P>(QS. Al-Baqarah: 208)</P>
 	</figcaption>
 </figure>
 
