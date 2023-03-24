@@ -8,13 +8,9 @@
 
 <Navbar let:hidden let:toggle>
 	<NavBrand href="/">
-		<img
-			src="https://flowbite.com/docs/images/logo.svg"
-			class="mr-3 h-6 sm:h-9"
-			alt="Flowbite Logo"
-		/>
+		<img src="./src/lib/logo.svg" class="mr-3 h-6 sm:h-9" alt="Sharia Banking Learn Logo" />
 		<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-			Syaria Banking Learn
+			Sharia Banking Learn
 		</span>
 	</NavBrand>
 	<div class="flex md:order-2">

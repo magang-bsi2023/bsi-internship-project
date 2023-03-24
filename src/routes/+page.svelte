@@ -4,6 +4,7 @@
 </script>
 
 <div class="flex flex-col p-5 text-center my-10">
+	<img src="./src/lib/logo.svg" class="h-40 mb-3" alt="Sharia Banking Learn Logo" />
 	<Heading tag="h1" class="text-green-600 dark:text-green-600 text-3xl mb-5">
 		Selamat Datang<br />di Sharia Banking Learn
 	</Heading>
