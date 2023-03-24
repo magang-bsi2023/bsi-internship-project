@@ -9,7 +9,7 @@
 </Breadcrumb>
 
 <div
-	class="flex flex-col content-center p-5 border rounded-lg dark:border-gray-600 dark:bg-gray-900"
+	class="flex flex-col content-center p-5 border rounded-lg dark:border-gray-600 dark:bg-gray-900 "
 >
 	<h1 class="mb-5 text-2xl font-bold text-green-500">Daftar Course</h1>
 	<Accordion
