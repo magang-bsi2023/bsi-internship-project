@@ -4,11 +4,15 @@
 	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
 	import { Footer, FooterLinkGroup, FooterLink, FooterCopyright } from 'flowbite-svelte';
 	import { page } from '$app/stores';
+	import logo from '$lib/logo.svg';
+	import PageTitle from '$lib/utils/PageTitle.svelte'
 </script>
+
+<PageTitle></PageTitle>
 
 <Navbar let:hidden let:toggle>
 	<NavBrand href="/">
-		<img src="./src/lib/logo.svg" class="mr-3 h-6 sm:h-9" alt="Sharia Banking Learn Logo" />
+		<img src={logo} class="mr-3 h-6 sm:h-9" alt="Sharia Banking Learn Logo" />
 		<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
 			Sharia Banking Learn
 		</span>
