@@ -8,7 +8,7 @@
 	import PageTitle from '$lib/utils/PageTitle.svelte'
 </script>
 
-<PageTitle></PageTitle>
+<PageTitle></PageTitle> <!-- Page <title/> -->
 
 <Navbar let:hidden let:toggle>
 	<NavBrand href="/">
@@ -27,8 +27,8 @@
 		nonActiveClass="text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
 	>
 		<NavLi active={$page.url.pathname == '/'} href="/">Home</NavLi>
-		<NavLi active={$page.url.pathname == '/courses'} href="/courses">Courses</NavLi>
-		<NavLi active={$page.url.pathname == '/about'} href="/about">About</NavLi>
+		<NavLi active={$page.url.pathname == '/materi'} href="/materi">Materi</NavLi>
+		<NavLi active={$page.url.pathname == '/about'} href="/about">Tentang</NavLi>
 	</NavUl>
 </Navbar>
 
