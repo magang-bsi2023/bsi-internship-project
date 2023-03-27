@@ -6,7 +6,7 @@
 
 <div class="flex flex-col p-5 text-center my-10">
 	<img src={logo} class="h-40 mb-3" alt="Sharia Banking Learn Logo" />
-	<Heading tag="h1" class="text-green-600 dark:text-green-600 text-3xl mb-5">
+	<Heading tag="h1" color="text-green-600 dark:text-green-500" class="text-3xl mb-5">
 		Selamat Datang<br />di Sharia Banking Learn
 	</Heading>
 	<P class="dark:text-gray-400 text-center">Sumber Belajar Digital Perbankan Syariah</P>

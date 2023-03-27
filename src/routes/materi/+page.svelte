@@ -40,11 +40,11 @@
 </Breadcrumb>
 
 <div class="flex flex-row">
-	<Heading tag="h1" class="mb-5" color="text-green-500 dark:text-green-600" customSize="text-3xl font-bold">Perbankan Syariah</Heading>
+	<Heading tag="h1" class="mb-5" color="text-green-600 dark:text-green-500" customSize="text-3xl font-bold">Perbankan Syariah</Heading>
 	{#if trueChecker(items)}
-	<Button class="ml-auto mb-5 w-40" color="green" on:click={closeAll}>Tutup Semua</Button>
+	<Button outline pill size="sm" class="ml-auto mb-5 w-40" color="green" on:click={closeAll}>Tutup Semua</Button>
 	{:else}
-	<Button class="ml-auto mb-5 w-40" color="green" on:click={openAll}>Buka Semua</Button>
+	<Button outline pill size="sm" class="ml-auto mb-5 w-40" color="green" on:click={openAll}>Buka Semua</Button>
 	{/if}
 </div>
 <div
@@ -52,7 +52,7 @@
 >
 	<Accordion
 	multiple
-	activeClasses="bg-green-100 dark:bg-gray-800 text-green-600 dark:text-green-500 focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800"
+	activeClasses="bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-500 focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800"
 	inactiveClasses="text-gray-600 dark:text-gray-400 hover:bg-green-100 dark:hover:bg-gray-800"
 	>
 		<AccordionItem bind:open={items[0]}>
@@ -74,7 +74,7 @@
 				<span class="text-lg">Pendahuluan</span>
 			</span>
 			<div
-				class="-mx-1 -my-5 divide-y [&>div>a]:capitalize dark:divide-gray-500 [&>*]:py-3 [&>div>a]:text-green-500 hover:[&>div>a]:underline hover:[&>div>a]:text-green-500"
+				class="-mx-1 -my-5 divide-y [&>div>a]:capitalize dark:divide-gray-500 [&>*]:py-3 [&>div>a]:text-green-600 [&>div>a]:dark:text-green-500 hover:[&>div>a]:underline hover:[&>div>a]:text-green-500"
 			>
 				{#each unitOne as unit}
 				<div>
@@ -102,7 +102,7 @@
 				<span class="text-lg">Implementasi Hukum Syariah di Perbankan</span>
 			</span>
 			<div
-				class="-mx-1 -my-5 divide-y [&>div>a]:capitalize dark:divide-gray-500 [&>*]:py-3 [&>div>a]:text-green-500 hover:[&>div>a]:underline hover:[&>div>a]:text-green-500"
+				class="-mx-1 -my-5 divide-y [&>div>a]:capitalize dark:divide-gray-500 [&>*]:py-3 [&>div>a]:text-green-600 [&>div>a]:dark:text-green-500 hover:[&>div>a]:underline hover:[&>div>a]:text-green-500"
 			>
 				{#each unitTwo as unit}
 				<div>
@@ -130,7 +130,7 @@
 				<span class="text-lg">Perbedaan Perbankan Syariah dan Perbankan Konvensional</span>
 			</span>
 			<div
-				class="-mx-1 -my-5 divide-y [&>div>a]:capitalize dark:divide-gray-500 [&>*]:py-3 [&>div>a]:text-green-500 hover:[&>div>a]:underline hover:[&>div>a]:text-green-500"
+				class="-mx-1 -my-5 divide-y [&>div>a]:capitalize dark:divide-gray-500 [&>*]:py-3 [&>div>a]:text-green-600 [&>div>a]:dark:text-green-500 hover:[&>div>a]:underline hover:[&>div>a]:text-green-500"
 			>
 				{#each unitThree as unit}
 				<div>
@@ -158,7 +158,7 @@
 				<span class="text-lg">Produk Perbankan Syariah</span>
 			</span>
 			<div
-				class="-mx-1 -my-5 divide-y [&>div>a]:capitalize dark:divide-gray-500 [&>*]:py-3 [&>div>a]:text-green-500 hover:[&>div>a]:underline hover:[&>div>a]:text-green-500"
+				class="-mx-1 -my-5 divide-y [&>div>a]:capitalize dark:divide-gray-500 [&>*]:py-3 [&>div>a]:text-green-600 [&>div>a]:dark:text-green-500 hover:[&>div>a]:underline hover:[&>div>a]:text-green-500"
 			>
 				{#each unitFour as unit}
 				<div>
