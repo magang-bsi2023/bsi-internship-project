@@ -7,8 +7,8 @@
 
 <Breadcrumb class="mb-5" aria-label="Solid background breadcrumb" solid>
 	<BreadcrumbItem href="/" home>Home</BreadcrumbItem>
-	<BreadcrumbItem href="/courses">Courses</BreadcrumbItem>
-	<BreadcrumbItem>1.1 Asal Hukum Syariah</BreadcrumbItem>
+	<BreadcrumbItem href="/materi">Materi</BreadcrumbItem>
+	<BreadcrumbItem>1.1. Asal Hukum Syariah</BreadcrumbItem>
 </Breadcrumb>
 
 <h1 class="capitalize text-2xl text-green-500 font-bold dark:text-white mb-1">
@@ -24,4 +24,4 @@
 
 <Iframe title="interactive1" src="https://augussst.github.io/AS-LuasdanVolume-BangunRuang/"></Iframe>
 
-<PageNav back="/courses" next="/1.2.-prinsip-bank-syariah"></PageNav>
+<PageNav back="/materi" next="/1.2.-prinsip-bank-syariah"></PageNav>

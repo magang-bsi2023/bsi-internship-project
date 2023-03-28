@@ -28,7 +28,7 @@
 	>
 		<NavLi active={$page.url.pathname == '/'} href="/">Home</NavLi>
 		<NavLi active={$page.url.pathname == '/materi'} href="/materi">Materi</NavLi>
-		<NavLi active={$page.url.pathname == '/about'} href="/about">Tentang</NavLi>
+		<NavLi active={$page.url.pathname == '/tentang'} href="/tentang">Tentang</NavLi>
 	</NavUl>
 </Navbar>
 
@@ -41,7 +41,7 @@
 	<FooterLinkGroup
 		ulClass="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
 	>
-		<FooterLink href="/about">About</FooterLink>
-		<FooterLink href="/contact">Contact</FooterLink>
+		<FooterLink href="/tentang">Tentang</FooterLink>
+		<FooterLink href="/kontak">Kontak</FooterLink>
 	</FooterLinkGroup>
 </Footer>
