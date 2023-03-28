@@ -1,7 +1,7 @@
 <script>
     import { page } from '$app/stores'
 
-    $: pageTitle = () => {
+    function pageTitle() {
         // Use status code if there's an error
         if ($page.error) return $page.status
 
