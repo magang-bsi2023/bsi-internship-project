@@ -1,6 +1,5 @@
 <script>
 	import { Button, Card, Heading, P, Blockquote } from 'flowbite-svelte';
-	import Parag from '$lib/components/Parag.svelte';
 	import logo from '$lib/logo.svg';
 </script>
 
@@ -48,5 +47,5 @@
 	<Heading tag="h3" customSize="text-lg font-semibold"
 		>Tertarik memahami perbankan syariah lebih lanjut?</Heading
 	>
-	<Button color="green" href="/courses">Mulai&nbsp;Belajar</Button>
+	<Button color="green" href="/materi">Mulai&nbsp;Belajar</Button>
 </div>

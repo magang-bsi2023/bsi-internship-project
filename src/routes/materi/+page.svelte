@@ -36,7 +36,7 @@
 
 <Breadcrumb class="mb-5" aria-label="Solid background breadcrumb" solid>
 	<BreadcrumbItem href="/" home>Home</BreadcrumbItem>
-	<BreadcrumbItem>Courses</BreadcrumbItem>
+	<BreadcrumbItem>Materi</BreadcrumbItem>
 </Breadcrumb>
 
 <div class="flex flex-row">
