@@ -5,10 +5,10 @@
 	import { Footer, FooterLinkGroup, FooterLink, FooterCopyright } from 'flowbite-svelte';
 	import { page } from '$app/stores';
 	import logo from '$lib/logo.svg';
-	import PageTitle from '$lib/utils/PageTitle.svelte'
+	import HeadPageTitle from '$lib/utils/HeadPageTitle.svelte'
 </script>
 
-<PageTitle></PageTitle> <!-- Page <title/> -->
+<HeadPageTitle></HeadPageTitle> <!-- Page <title/> -->
 
 <Navbar let:hidden let:toggle>
 	<NavBrand href="/">
