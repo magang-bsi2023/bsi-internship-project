@@ -1,12 +1,12 @@
 <script>
-    export let back
     export let next
+    export let prev
     import { Button } from 'flowbite-svelte'
 </script>
 
 <div class="flex justify-around">
 	<Button
-		href={back}
+		href={prev}
 		class="bg-green-500 hover:bg-green-600 dark:bg-green-500 dark:hover:bg-green-600"
 	>
 		<svg
