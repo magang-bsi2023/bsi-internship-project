@@ -14,6 +14,4 @@
     }
 </script>
 
-<svelte:head>
-    <title>SBL - {pageTitle()}</title>
-</svelte:head>
+{pageTitle()}
