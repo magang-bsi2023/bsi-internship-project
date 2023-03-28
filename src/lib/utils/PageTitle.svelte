@@ -7,8 +7,8 @@
 
         if ($page.url.pathname === '/') return 'Home'
 
-        const title = $page.url.pathname.split('/')[1]
-        const capilized = title.charAt(0).toUpperCase() + title.slice(1)
+        const title = $page.url.pathname.split('/').pop().replace(/-/g, ' ')
+        const capilized = title.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.substring(1)).join(' ');
 
         return String(capilized) || ''
     }
