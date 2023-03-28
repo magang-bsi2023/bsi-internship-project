@@ -4,7 +4,7 @@
 	import Iframe from '$lib/components/Iframe.svelte';
 </script>
 
-<MateriLayout prev="/materi" next="/materi/1.2.-prinsip-bank-syariah">
+<MateriLayout>
 	<P>
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, impedit in. Impedit expedita
 		reprehenderit inventore. Placeat unde quibusdam voluptas cum quam? Ut soluta, explicabo numquam
