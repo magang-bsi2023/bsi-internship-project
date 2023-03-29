@@ -15,7 +15,7 @@
 	</div>
 </div>
 
-<style global lang="postcss">
+<style lang="postcss">
 	.video-container {
 		max-width: 1250px;
 		margin-inline: auto;
