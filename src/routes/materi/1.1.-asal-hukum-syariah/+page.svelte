@@ -4,7 +4,7 @@
 	import Iframe from '$lib/components/Iframe.svelte';
 </script>
 
-<MateriLayout>
+<MateriLayout linkEvaluasi="https://docs.google.com/forms/d/e/1FAIpQLSfzgmovxA_6aUeELAdrXzDiHhzSPmni25S11R1DZaaQ1cAHdQ/viewform?embedded=true">
 	<P>
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, impedit in. Impedit expedita
 		reprehenderit inventore. Placeat unde quibusdam voluptas cum quam? Ut soluta, explicabo numquam
