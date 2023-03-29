@@ -12,6 +12,9 @@ const config = {
 			edge: false,
 			split: false
 		}),
+		alias: {
+			'$materi': './src/routes/materi'
+		}
 	},
 
 	preprocess: [
