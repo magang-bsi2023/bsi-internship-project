@@ -1,12 +1,44 @@
 <script>
-    export let next
-    export let prev
-    import { Button } from 'flowbite-svelte'
+	import { page } from '$app/stores';
+    import { Button } from 'flowbite-svelte';
+
+	// Dynamic PageNav
+    function getAllCourseLink() {
+		const modules = import.meta.glob("$materi/**");
+        
+		let body = [];
+		for (let path in modules) {
+			let pathSanitized = path.replace("/+page.svelte", "").replace("/src/routes/", "/");
+			body.push({
+				title: pathSanitized
+			});
+		}
+
+        let linkArr = body.map(titles => titles.title);
+		return linkArr;
+	}
+
+    const currentLink = $page.url.pathname
+    const indexOfCurrentLink =  getAllCourseLink().indexOf(currentLink);
+
+    function getNextLink() {
+        const IndexOfNextLink = indexOfCurrentLink + 1
+        return getAllCourseLink()[IndexOfNextLink]
+    };
+
+    function getPrevLink() {
+        const IndexOfPrevLink = indexOfCurrentLink - 1
+        return getAllCourseLink()[IndexOfPrevLink]
+    }
+
+	console.log(import.meta.glob("$materi/**"))
+	console.log(getNextLink())
+	console.log(getPrevLink());
 </script>
 
 <div class="flex justify-around">
 	<Button
-		href={prev}
+		href={getPrevLink()}
 		class="bg-green-500 hover:bg-green-600 dark:bg-green-500 dark:hover:bg-green-600"
 	>
 		<svg
@@ -25,11 +57,13 @@
 		</svg>
 		Kembali
 	</Button>
+	{#if getNextLink() !== undefined}
 	<Button
-		href={next}
+		href={getNextLink()}
 		class="bg-green-500 hover:bg-green-600 dark:bg-green-500 dark:hover:bg-green-600"
 	>
-		Selanjutnya <svg
+		Selanjutnya
+		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="none"
 			viewBox="0 0 24 24"
@@ -44,4 +78,5 @@
 			/>
 		</svg>
 	</Button>
+	{/if}
 </div>
