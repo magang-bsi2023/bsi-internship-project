@@ -6,11 +6,11 @@
 
     // Dynamic PageNav
     function getAllCourseLink() {
-		const modules = import.meta.glob("../../routes/materi/**");
+		const modules = import.meta.glob("$materi/**");
         
 		let body = [];
 		for (let path in modules) {
-			let pathSanitized = path.replace("/+page.svelte", "").replace("../../routes/", "/");
+			let pathSanitized = path.replace("/+page.svelte", "").replace("/src/routes/", "/");
 			body.push({
 				title: pathSanitized
 			});
