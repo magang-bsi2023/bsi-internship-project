@@ -13,6 +13,7 @@ const config = {
 			split: false
 		}),
 		alias: {
+			'$routes': './src/routes',
 			'$materi': './src/routes/materi'
 		}
 	},
