@@ -30,10 +30,6 @@
         const IndexOfPrevLink = indexOfCurrentLink - 1
         return getAllCourseLink()[IndexOfPrevLink]
     }
-
-	console.log(import.meta.glob("$materi/**"))
-	console.log(getNextLink())
-	console.log(getPrevLink());
 </script>
 
 <div class="flex justify-around">
