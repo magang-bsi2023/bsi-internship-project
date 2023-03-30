@@ -26,26 +26,27 @@
 	// export let data;
 </script>
 
-<div class="flex flex-col p-5 text-center my-10">
+<div class="flex flex-col p-5 text-center my-5">
 	<img src={logo} class="h-32 mb-3" alt="Sharia Banking Learn Logo" />
-	<Heading tag="h1" color="text-bsiyellow" class="text-1xl mb-5">
+	<Heading tag="h1" customSize="text-4xl font-semibold" color="text-bsiyellow" class="mb-5">
 		Energi Baru Untuk Indonesia
 	</Heading>
 	<!-- <P class="dark:text-gray-400 text-center capitalize">{data.page.tagline}</P> -->
 </div>
 
 <div
-	class="flex flex-col content-center p-5 border rounded-lg dark:border-gray-600 dark:bg-gray-900 "
+	class="flex flex-col bg-gray-50 dark:bg-gray-800 content-center p-5 border rounded-lg dark:border-gray-600"
 >
 	<Accordion
 	multiple
-	activeClasses="font-black bg-bsiyellow/[0.1] dark:bg-bsiyellow/[0.1] text-bsiyellow dark:text-bsiyellow [&>span>span]:font-bold"
+	class="[&>div]:"
+	activeClasses="font-black bg-bsiyellow dark:bg-bsiyellow text-bsiwhite [&>span>span]:font-bold"
 	inactiveClasses="text-gray-600 dark:text-gray-400 hover:bg-bsiyellow/[0.1]"
 	>
 		<AccordionItem open>
-			<span class="text-base flex gap-2" slot="header">
+			<span class="text-base flex gap-1 items-center" slot="header">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-				class="w-6 h-6"
+				class="w-6 h-6 stroke-2"
 				><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
 				<span class="text-lg">Bank</span>
 			</span>
@@ -60,9 +61,9 @@
 			</div>
 		</AccordionItem>
 		<AccordionItem open>
-			<span class="text-base flex gap-2" slot="header">
+			<span class="text-base flex gap-1 items-center" slot="header">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-					class="w-6 h-6"
+					class="w-6 h-6 stroke-2"
 				><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
 				</svg>
 				<span class="text-lg">Syariah</span>
@@ -78,9 +79,9 @@
 			</div>
 		</AccordionItem>
 		<AccordionItem open>
-			<span class="text-base flex gap-2" slot="header">
+			<span class="text-base flex gap-1 items-center" slot="header">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-					class="w-6 h-6"
+					class="w-6 h-6 stroke-2"
 				><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
 				</svg>
 				<span class="text-lg">Indonesia</span>
@@ -97,9 +98,3 @@
 		</AccordionItem>
 	</Accordion>
 </div>
-
-<!-- <style lang="postcss">
-	button[aria-expanded="true"]{
-		font-weight: 900 !important;
-	}
-</style> -->
