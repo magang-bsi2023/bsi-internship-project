@@ -1,51 +1,105 @@
+<script context="module">
+	export function getAllCourse() {
+		const modules = import.meta.glob("$materi/**/**.svelte");
+		let body = [];
+		for (let path in modules) {
+			let pathSanitized = path.replace("/+page.svelte", "").replace("src/routes/", "");
+			body.push({
+				title: pathSanitized.replace("/materi/", "").replace(/-/g, " "),
+				link: pathSanitized
+			});
+		}
+		return body;
+	}
+	function getCourseUnit(filter, arr) {
+		return arr.filter(obj => obj.title.charAt(0) === filter);
+	}
+
+	const unitOne = getCourseUnit("1", getAllCourse());
+	const unitTwo = getCourseUnit("2", getAllCourse());
+	const unitThree = getCourseUnit("3", getAllCourse());
+</script>
+
 <script>
-	import { Button, Card, Heading, P, Blockquote } from 'flowbite-svelte';
-	import logo from '$lib/logo.svg';
+	import { Button, Heading, Accordion, AccordionItem } from 'flowbite-svelte';
+	import logo from '$lib/logo/bsi_green.svg';
+	// export let data;
 </script>
 
 <div class="flex flex-col p-5 text-center my-10">
-	<img src={logo} class="h-40 mb-3" alt="Sharia Banking Learn Logo" />
-	<Heading tag="h1" color="text-green-600 dark:text-green-500" class="text-3xl mb-5">
-		Selamat Datang<br />di Sharia Banking Learn
+	<img src={logo} class="h-32 mb-3" alt="Sharia Banking Learn Logo" />
+	<Heading tag="h1" color="text-bsiyellow" class="text-1xl mb-5">
+		Energi Baru Untuk Indonesia
 	</Heading>
-	<P class="dark:text-gray-400 text-center">Sumber Belajar Digital Perbankan Syariah</P>
+	<!-- <P class="dark:text-gray-400 text-center capitalize">{data.page.tagline}</P> -->
 </div>
-<div class="flex flex-col gap-5 text-center [&>div>h2]:text-2xl [&>div>P]:text-center">
-	<div
-		class="p-5 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md"
-	>
-		<Heading tag="h2">Apa itu Sharia Banking?</Heading>
-		<P
-			>Sharia banking atau perbankan syariah adalah segala sesuatu mengenai bank yang sesuai dengan hukum-hukum Islam. Implementasi prinsip syariah inilah yang menjadi pembeda utama dengan bank konvensional.  Pada intinya prinsip  syariah tersebut mengacu kepada syariah Islam yang berpedoman utama kepada Al-Quran dan Hadist. Islam sebagai agama merupakan konsep yang mengatur kehidupan manusia secara komprehensif dan universal baik dalam hubungan dengan Sang Pencipta (HabluminAllah) maupun dalam hubungan sesama manusia (Hablumminannas).</P
-		>
-	</div>
-	<div
-		class="p-5 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md"
-	>
-		<Heading tag="h2">Mengapa kita harus belajar Sharia Banking?</Heading>
-		<P
-			>Sebagai Muslim, kita harus memahami aturan-aturan dan prinsip-prinsip perbankan yang sesuai dengan syariat Islam agar kita terhindari dari hal-hal yang dapat memberikan keburukan karena tidak sesuai dengan syariat Islam. Dengan memahami perbankan syariah, diharapkan kita dapat mulai mengikuti syariat-syariatnya dengan menggunakan bank syariah.</P
-		>
-	</div>
-</div>
-
-<figure class="mx-auto max-w-screen-md text-center my-5">
-	<Blockquote class="mb-3" alignment="center" size="2xl">
-		يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ ٱدْخُلُوا۟ فِى ٱلسِّلْمِ كَآفَّةً وَلَا تَتَّبِعُوا۟ خُطُوَٰتِ ٱلشَّيْطَٰنِ ۚ إِنَّهُۥ لَكُمْ عَدُوٌّ مُّبِينٌ
-	</Blockquote>
-	<Blockquote alignment="center" size="lg">
-		“Wahai orang-orang yang beriman! Masuklah ke dalam Islam secara keseluruhan, dan janganlah kamu ikuti langkah-langkah setan. Sungguh, ia musuh yang nyata bagimu.”
-	</Blockquote>
-	<figcaption class="flex justify-center items-center mt-3 space-x-3">
-		<P>(QS. Al-Baqarah: 208)</P>
-	</figcaption>
-</figure>
 
 <div
-	class="flex flex-col text-center gap-3 md:gap-0 md:text-left md:flex-row items-center my-5 p-5 bg-white dark:bg-gray-800 rounded-lg border-2 border-green-500 dark:border-gray-700 shadow-md"
+	class="flex flex-col content-center p-5 border rounded-lg dark:border-gray-600 dark:bg-gray-900 "
 >
-	<Heading tag="h3" customSize="text-lg font-semibold"
-		>Tertarik memahami perbankan syariah lebih lanjut?</Heading
+	<Accordion
+	multiple
+	activeClasses="font-black bg-bsiyellow/[0.1] dark:bg-bsiyellow/[0.1] text-bsiyellow dark:text-bsiyellow [&>span>span]:font-bold"
+	inactiveClasses="text-gray-600 dark:text-gray-400 hover:bg-bsiyellow/[0.1]"
 	>
-	<Button color="green" href="/materi">Mulai&nbsp;Belajar</Button>
+		<AccordionItem open>
+			<span class="text-base flex gap-2" slot="header">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+				class="w-6 h-6"
+				><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+				<span class="text-lg">Bank</span>
+			</span>
+			<div
+				class="-mx-1 -my-5 divide-y [&>div>a]:capitalize dark:divide-gray-500 [&>*]:py-3 [&>div>a]:text-bsigreen [&>div>a]:dark:text-bsigreen hover:[&>div>a]:underline hover:[&>div>a]:text-bsigreen"
+			>
+				{#each unitOne as unit}
+				<div>
+					<a href={unit.link}>{unit.title}</a>
+				</div>
+				{/each}
+			</div>
+		</AccordionItem>
+		<AccordionItem open>
+			<span class="text-base flex gap-2" slot="header">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+					class="w-6 h-6"
+				><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+				</svg>
+				<span class="text-lg">Syariah</span>
+			</span>
+			<div
+				class="-mx-1 -my-5 divide-y [&>div>a]:capitalize dark:divide-gray-500 [&>*]:py-3 [&>div>a]:text-bsigreen [&>div>a]:dark:text-bsigreen hover:[&>div>a]:underline hover:[&>div>a]:text-bsigreen"
+			>
+				{#each unitTwo as unit}
+				<div>
+					<a href={unit.link}>{unit.title}</a>
+				</div>
+				{/each}
+			</div>
+		</AccordionItem>
+		<AccordionItem open>
+			<span class="text-base flex gap-2" slot="header">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+					class="w-6 h-6"
+				><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+				</svg>
+				<span class="text-lg">Indonesia</span>
+			</span>
+			<div
+				class="-mx-1 -my-5 divide-y [&>div>a]:capitalize dark:divide-gray-500 [&>*]:py-3 [&>div>a]:text-bsigreen [&>div>a]:dark:text-bsigreen hover:[&>div>a]:underline hover:[&>div>a]:text-bsigreen"
+			>
+				{#each unitThree as unit}
+				<div>
+					<a href={unit.link}>{unit.title}</a>
+				</div>
+				{/each}
+			</div>
+		</AccordionItem>
+	</Accordion>
 </div>
+
+<!-- <style lang="postcss">
+	button[aria-expanded="true"]{
+		font-weight: 900 !important;
+	}
+</style> -->
