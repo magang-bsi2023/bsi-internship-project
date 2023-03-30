@@ -5,7 +5,7 @@
 	import { page } from '$app/stores';
 	import logo from '$lib/logo/bsi_horizontal_green.svg';
 	import HeadPageTitle from '$lib/utils/HeadPageTitle.svelte'
-	export let data;
+	// export lst data;
 </script>
 
 <HeadPageTitle></HeadPageTitle> <!-- Page <title/> -->
