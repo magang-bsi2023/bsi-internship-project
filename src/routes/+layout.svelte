@@ -1,21 +1,23 @@
 <script>
+	/** @type {import('./$types').PageData} */
 	import '../app.postcss';
 	import { DarkMode } from 'flowbite-svelte';
 	import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
 	import { Footer, FooterLinkGroup, FooterLink, FooterCopyright } from 'flowbite-svelte';
 	import { page } from '$app/stores';
-	import logo from '$lib/logo.svg';
+	import logo from '$lib/logo/bsi_horizontal_green.svg';
 	import HeadPageTitle from '$lib/utils/HeadPageTitle.svelte'
+	export let data;
 </script>
 
 <HeadPageTitle></HeadPageTitle> <!-- Page <title/> -->
 
 <Navbar let:hidden let:toggle>
 	<NavBrand href="/">
-		<img src={logo} class="mr-3 h-6 sm:h-9" alt="Sharia Banking Learn Logo" />
-		<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-			Sharia Banking Learn
-		</span>
+		<img src={logo} class="mr-3 h-6 sm:h-9" alt="BSI Logo" />
+		<!-- <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+			{data.page.title}
+		</span> -->
 	</NavBrand>
 	<div class="flex md:order-2">
 		<DarkMode />
@@ -23,7 +25,7 @@
 	</div>
 	<NavUl
 		{hidden}
-		activeClass="text-white font-bold bg-green-700 md:bg-transparent md:text-green-600 md:dark:text-green-500 dark:bg-green-600 md:dark:bg-transparent"
+		activeClass="text-white font-bold bg-green-700 md:bg-transparent md:text-bsigreen md:dark:text-bsigreen dark:bg-green-600 md:dark:bg-transparent"
 		nonActiveClass="text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
 	>
 		<NavLi active={$page.url.pathname == '/'} href="/">Home</NavLi>
