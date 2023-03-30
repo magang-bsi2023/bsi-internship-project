@@ -33,6 +33,7 @@
 </script>
 
 <div class="flex justify-around">
+	{#if getPrevLink() !== "/materi"}
 	<Button
 		href={getPrevLink()}
 		class="bg-green-500 hover:bg-green-600 dark:bg-green-500 dark:hover:bg-green-600"
@@ -51,14 +52,15 @@
 				d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"
 			/>
 		</svg>
-		Kembali
+		Materi Sebelumnya
 	</Button>
+	{/if}
 	{#if getNextLink() !== undefined}
 	<Button
 		href={getNextLink()}
 		class="bg-green-500 hover:bg-green-600 dark:bg-green-500 dark:hover:bg-green-600"
 	>
-		Selanjutnya
+		Materi Selanjutnya
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="none"
