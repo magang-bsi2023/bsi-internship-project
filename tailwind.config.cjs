@@ -7,8 +7,8 @@ const config = {
 	theme: {
 		extend: {},
 		fontFamily: {
-			// 'sans': ['arial', 'sans-serif'],
-			// 'heading': ['lato', 'sans-serif']
+			'sans': ['arial', 'sans-serif'],
+			'heading': ['lato', 'sans-serif']
 		},
 		colors: {
 			bsigreen: 'rgba(0,163,157)',
