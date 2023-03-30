@@ -6,11 +6,16 @@ const config = {
 
 	theme: {
 		extend: {},
+		fontFamily: {
+			// 'sans': ['arial', 'sans-serif'],
+			// 'heading': ['lato', 'sans-serif']
+		},
 		colors: {
-			bsiorange: 'hsl(36, 94%, 61%)',
-			white: '#FEFEFEff',
-			bsigreen: 'hsl(177, 85%, 35%)',
-			bsilgreen: 'hsl(177, 100%, 35%)'
+			bsigreen: 'rgba(0,163,157)',
+			bsilgreen: 'hsl(177, 100%, 35%)',
+			bsiyellow: 'rgba(248,173,60)',
+			bsiwhite: 'rgba(255,255,255)',
+			bsigrey: 'rgba(136,139,141)'
 		}
 	},
 
