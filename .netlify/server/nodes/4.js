@@ -1,8 +1,8 @@
 
 
 export const index = 4;
-export const component = async () => (await import('../entries/pages/courses/1.1.asal-hukum-syariah/_page.svelte.js')).default;
-export const file = '_app/immutable/entry/courses-1.1.asal-hukum-syariah-page.svelte.55ed1581.js';
-export const imports = ["_app/immutable/entry/courses-1.1.asal-hukum-syariah-page.svelte.55ed1581.js","_app/immutable/chunks/index.debf67a9.js","_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.7adfd83d.js","_app/immutable/chunks/BreadcrumbItem.244d3cd5.js","_app/immutable/chunks/Button.adc23884.js"];
-export const stylesheets = ["_app/immutable/assets/_page.e74fb9f5.css","_app/immutable/assets/Indicator.1d121e74.css"];
+export const component = async () => (await import('../entries/pages/materi/1.1.-barter-dan-uang/_page.svelte.js')).default;
+export const file = '_app/immutable/entry/materi-1.1.-barter-dan-uang-page.svelte.39a1cd52.js';
+export const imports = ["_app/immutable/entry/materi-1.1.-barter-dan-uang-page.svelte.39a1cd52.js","_app/immutable/chunks/index.9fb448a9.js","_app/immutable/chunks/Indicator.svelte_svelte_type_style_lang.7adfd83d.js","_app/immutable/chunks/P.cefa087f.js","_app/immutable/chunks/Iframe.0bf78428.js","_app/immutable/chunks/preload-helper.41c905a7.js","_app/immutable/chunks/stores.bda0e5b0.js","_app/immutable/chunks/singletons.fed97b4f.js","_app/immutable/chunks/index.05f8793a.js","_app/immutable/chunks/Button.9769cb79.js","_app/immutable/chunks/BreadcrumbItem.cd5ae472.js","_app/immutable/chunks/Heading.9947f2df.js"];
+export const stylesheets = ["_app/immutable/assets/Indicator.1d121e74.css","_app/immutable/assets/Iframe.6dc29588.css"];
 export const fonts = [];

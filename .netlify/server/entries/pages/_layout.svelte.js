@@ -387,17 +387,38 @@ const NavUl = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {}
   )}><ul${add_attribute("class", _ulClass, 0)}>${slots.default ? slots.default({}) : ``}</ul></div>`}`;
 });
+const logo = "/_app/immutable/assets/bsi_horizontal_green.c44ec9c0.svg";
+const HeadPageTitle = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let pageTitle;
+  let $page, $$unsubscribe_page;
+  $$unsubscribe_page = subscribe(page, (value) => $page = value);
+  pageTitle = () => {
+    if ($page.error)
+      return $page.status;
+    if ($page.url.pathname === "/")
+      return "Home";
+    const title = $page.url.pathname.split("/").pop().replace(/-/g, " ");
+    const capilized = title.toLowerCase().split(" ").map((word) => word.charAt(0).toUpperCase() + word.substring(1)).join(" ");
+    return String(capilized) || "";
+  };
+  $$unsubscribe_page();
+  return `${$$result.head += `<!-- HEAD_svelte-1b640mz_START -->${$$result.title = `<title>SBL - ${escape(pageTitle())}</title>`, ""}<!-- HEAD_svelte-1b640mz_END -->`, ""}`;
+});
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $page, $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
+  let { data } = $$props;
+  if ($$props.data === void 0 && $$bindings.data && data !== void 0)
+    $$bindings.data(data);
   $$unsubscribe_page();
-  return `${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {
+  return `${validate_component(HeadPageTitle, "HeadPageTitle").$$render($$result, {}, {}, {})} 
+
+${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {
     default: ({ hidden, toggle }) => {
       return `${validate_component(NavBrand, "NavBrand").$$render($$result, { href: "/" }, {}, {
         default: () => {
-          return `<img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo">
-		<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Syaria Banking Learn
-		</span>`;
+          return `<img${add_attribute("src", logo, 0)} class="mr-3 h-6 sm:h-9" alt="BSI Logo">
+		`;
         }
       })}
 	<div class="flex md:order-2">${validate_component(DarkMode, "DarkMode").$$render($$result, {}, {}, {})}
@@ -406,7 +427,8 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         $$result,
         {
           hidden,
-          activeClass: "text-white font-bold bg-green-700 md:bg-transparent md:text-green-700 md:dark:text-white dark:bg-green-600 md:dark:bg-transparent",
+          ulClass: "flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-base md:font-medium",
+          activeClass: "text-white font-bold bg-green-700 md:bg-transparent md:text-bsigreen md:dark:text-bsigreen dark:bg-green-600 md:dark:bg-transparent",
           nonActiveClass: "text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
         },
         {},
@@ -428,26 +450,26 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 		${validate_component(NavLi, "NavLi").$$render(
               $$result,
               {
-                active: $page.url.pathname == "/courses",
-                href: "/courses"
+                active: $page.url.pathname == "/materi",
+                href: "/materi"
               },
               {},
               {
                 default: () => {
-                  return `Courses`;
+                  return `Materi`;
                 }
               }
             )}
 		${validate_component(NavLi, "NavLi").$$render(
               $$result,
               {
-                active: $page.url.pathname == "/about",
-                href: "/about"
+                active: $page.url.pathname == "/tentang",
+                href: "/tentang"
               },
               {},
               {
                 default: () => {
-                  return `About`;
+                  return `Tentang`;
                 }
               }
             )}`;
@@ -470,14 +492,14 @@ ${validate_component(Footer, "Footer").$$render($$result, { class: "dark:bg-gray
         {},
         {
           default: () => {
-            return `${validate_component(FooterLink, "FooterLink").$$render($$result, { href: "/about" }, {}, {
+            return `${validate_component(FooterLink, "FooterLink").$$render($$result, { href: "/tentang" }, {}, {
               default: () => {
-                return `About`;
+                return `Tentang`;
               }
             })}
-		${validate_component(FooterLink, "FooterLink").$$render($$result, { href: "/contact" }, {}, {
+		${validate_component(FooterLink, "FooterLink").$$render($$result, { href: "/kontak" }, {}, {
               default: () => {
-                return `Contact`;
+                return `Kontak`;
               }
             })}`;
           }
