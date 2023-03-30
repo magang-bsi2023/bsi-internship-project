@@ -3,7 +3,7 @@
 	import BcCourse from '$lib/components/BcCourse.svelte';
 	import PageTitle from '$lib/utils/PageTitle.svelte';
 	import Evaluasi from '$lib/components/Evaluasi.svelte'
-	import { Tabs, TabItem, Button } from 'flowbite-svelte';
+	import { Tabs, TabItem, Button, Heading } from 'flowbite-svelte';
 
 	export let linkEvaluasi;
 
@@ -16,15 +16,15 @@
 
 
 <div class="[&>:nth-child(3)]:bg-transparent [&>:nth-child(3)]:dark:bg-transparent [&>:nth-child(3)]:mt-0 [&>:nth-child(3)]:px-0">
-	<Tabs style="underline" activeClasses="text-green-600">
+	<Tabs style="underline" activeClasses="text-bsigreen">
 		<TabItem open>
 			<div slot="title" class="flex items-center gap-2">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
 				Materi
 			</div>
-			<h1 class="capitalize text-2xl text-green-500 font-bold dark:text-green-500 mb-1">
+			<Heading tag="h1" customSize="text-2xl" class="capitalize text-bsigreen font-bold dark:text-bsigreen mb-1">
 				<PageTitle></PageTitle>
-			</h1>
+			</Heading>
 			<slot></slot>
 			<div class="flex justify-center">
 				<Button on:click={openSoal} size="xl" class="flex gap-1 w-1/4 bg-green-600">
