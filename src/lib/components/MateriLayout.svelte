@@ -1,6 +1,5 @@
 <script>
     import PageNav from '$lib/components/PageNav.svelte';
-	import BcCourse from '$lib/components/BcCourse.svelte';
 	import PageTitle from '$lib/utils/PageTitle.svelte';
 	import Evaluasi from '$lib/components/Evaluasi.svelte'
 	import { Tabs, TabItem, Button, Heading } from 'flowbite-svelte';
@@ -11,9 +10,6 @@
 		return console.log("i don't know how");
 	};
 </script>
-
-<BcCourse></BcCourse>
-
 
 <div class="[&>:nth-child(3)]:bg-transparent [&>:nth-child(3)]:dark:bg-transparent [&>:nth-child(3)]:mt-0 [&>:nth-child(3)]:px-0">
 	<Tabs style="underline" activeClasses="text-bsigreen">
