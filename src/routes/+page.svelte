@@ -22,7 +22,7 @@
 
 <script>
 	import { Button, Heading, Accordion, AccordionItem } from 'flowbite-svelte';
-	import logo from '$lib/logo/bsi_green.svg';
+	// import logo from '$lib/logo/bsi_green.svg';
 	// export let data;
 </script>
 
