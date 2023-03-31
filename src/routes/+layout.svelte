@@ -33,7 +33,7 @@
 	</NavUl>
 </Navbar>
 
-<div class="container mx-auto px-2 sm:px-4 py-2.5 w-full">
+<div class="container mx-auto py-2.5 w-full">
 	<slot />
 </div>
 
