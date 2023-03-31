@@ -6,6 +6,16 @@
 	import logo from '$lib/bsi_horizontal_green.svg';
 	import HeadPageTitle from '$lib/utils/HeadPageTitle.svelte'
 	// export lst data;
+
+	function getLinkLists() {
+		const modules = import.meta.glob("$materi/**/**.svelte");
+		let linkLists = [];
+		for (let path in modules) {
+			let pathSanitized = path.replace("/+page.svelte", "").replace("/src/routes/", "/");
+			linkLists.push(pathSanitized);
+		}
+		return linkLists.slice(1);
+	}
 </script>
 
 <HeadPageTitle></HeadPageTitle> <!-- Page <title/> -->
@@ -28,7 +38,7 @@
 		nonActiveClass="text-gray-700 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
 	>
 		<NavLi active={$page.url.pathname == '/'} href="/">Home</NavLi>
-		<NavLi active={$page.url.pathname == '/materi'} href="/materi">Materi</NavLi>
+		<NavLi active={getLinkLists().includes($page.url.pathname)} href="/materi">Materi</NavLi>
 		<NavLi active={$page.url.pathname == '/tentang'} href="/tentang">Tentang</NavLi>
 	</NavUl>
 </Navbar>
