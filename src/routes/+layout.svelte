@@ -3,7 +3,7 @@
 	import '../app.postcss';
 	import { DarkMode, Navbar, NavBrand, NavLi, NavUl, NavHamburger, Footer, FooterLinkGroup, FooterLink, FooterCopyright, ImagePlaceholder, Skeleton, TextPlaceholder } from 'flowbite-svelte';
 	import { page } from '$app/stores';
-	import logo from '$lib/logo/bsi_horizontal_green.svg';
+	// import logo from '$lib/logo/bsi_horizontal_green.svg';
 	import HeadPageTitle from '$lib/utils/HeadPageTitle.svelte'
 	// export lst data;
 </script>
