@@ -3,7 +3,7 @@
 	import '../app.postcss';
 	import { DarkMode, Navbar, NavBrand, NavLi, NavUl, NavHamburger, Footer, FooterLinkGroup, FooterLink, FooterCopyright, ImagePlaceholder, Skeleton, TextPlaceholder } from 'flowbite-svelte';
 	import { page } from '$app/stores';
-	// import logo from '$lib/logo/bsi_horizontal_green.svg';
+	import logo from '$lib/bsi_horizontal_green.svg';
 	import HeadPageTitle from '$lib/utils/HeadPageTitle.svelte'
 	// export lst data;
 </script>
@@ -12,7 +12,7 @@
 
 <Navbar let:hidden let:toggle>
 	<NavBrand href="/">
-		<!-- <img src={logo} class="mr-3 h-6 sm:h-9" alt="BSI Logo" /> -->
+		<img src={logo} class="mr-3 h-6 sm:h-9" alt="BSI Logo" />
 		<!-- <span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
 			{data.page.title}
 		</span> -->
