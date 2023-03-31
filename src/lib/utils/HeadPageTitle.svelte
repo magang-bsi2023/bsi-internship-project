@@ -15,5 +15,5 @@
 </script>
 
 <svelte:head>
-    <title>SBL - {pageTitle()}</title>
+    <title>{pageTitle()}</title>
 </svelte:head>
