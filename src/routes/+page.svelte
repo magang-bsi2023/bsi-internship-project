@@ -27,7 +27,7 @@
 </script>
 
 <div class="flex flex-col p-5 text-center my-5">
-	<img src={logo} class="h-32 mb-3" alt="Sharia Banking Learn Logo" />
+	<!-- <img src={logo} class="h-32 mb-3" alt="Sharia Banking Learn Logo" /> -->
 	<Heading tag="h1" customSize="text-4xl font-semibold" color="text-bsiyellow" class="mb-5">
 		Energi Baru Untuk Indonesia
 	</Heading>
