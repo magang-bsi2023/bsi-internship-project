@@ -1,8 +1,7 @@
-import { c as create_ssr_component, h as add_attribute, v as validate_component, k as each, f as escape } from "../../chunks/index2.js";
+import { c as create_ssr_component, v as validate_component, k as each, h as add_attribute, f as escape } from "../../chunks/index2.js";
 import { A as Accordion, a as AccordionItem } from "../../chunks/AccordionItem.js";
 import "classnames";
 /* empty css                                                    */import { H as Heading } from "../../chunks/Heading.js";
-const logo = "/_app/immutable/assets/bsi_green.7d08d391.svg";
 function getAllCourse() {
   const modules = /* @__PURE__ */ Object.assign({ "/src/routes/materi/+page.svelte": () => import("./materi/_page.svelte.js"), "/src/routes/materi/1.1.-barter-dan-uang/+page.svelte": () => import("./materi/1.1.-barter-dan-uang/_page.svelte.js"), "/src/routes/materi/1.2.-sejarah-dan-awal-praktik-bank/+page.svelte": () => import("./materi/1.2.-sejarah-dan-awal-praktik-bank/_page.svelte.js"), "/src/routes/materi/1.3.-mengapa-negara-perlu-bank/+page.svelte": () => import("./materi/1.3.-mengapa-negara-perlu-bank/_page.svelte.js"), "/src/routes/materi/1.4.-kehadiran-bank-bagi-masyarakat/+page.svelte": () => import("./materi/1.4.-kehadiran-bank-bagi-masyarakat/_page.svelte.js"), "/src/routes/materi/1.5.-evolusi-perbankan/+page.svelte": () => import("./materi/1.5.-evolusi-perbankan/_page.svelte.js"), "/src/routes/materi/1.6.-masa-depan-bank/+page.svelte": () => import("./materi/1.6.-masa-depan-bank/_page.svelte.js"), "/src/routes/materi/1.7.-integritas-bankir/+page.svelte": () => import("./materi/1.7.-integritas-bankir/_page.svelte.js"), "/src/routes/materi/2.1.-kearifan-lokal/+page.svelte": () => import("./materi/2.1.-kearifan-lokal/_page.svelte.js"), "/src/routes/materi/2.2.-apa-itu-syariah/+page.svelte": () => import("./materi/2.2.-apa-itu-syariah/_page.svelte.js"), "/src/routes/materi/2.3.-bank-syariah/+page.svelte": () => import("./materi/2.3.-bank-syariah/_page.svelte.js"), "/src/routes/materi/2.4.-sejarah-bank-syariah-di-indonesia/+page.svelte": () => import("./materi/2.4.-sejarah-bank-syariah-di-indonesia/_page.svelte.js"), "/src/routes/materi/2.5.-masa-depan-bank-syariah/+page.svelte": () => import("./materi/2.5.-masa-depan-bank-syariah/_page.svelte.js"), "/src/routes/materi/3.1.-genelogi-bangsa-indonesia/+page.svelte": () => import("./materi/3.1.-genelogi-bangsa-indonesia/_page.svelte.js"), "/src/routes/materi/3.2.-hubungan-agama-dan-negara/+page.svelte": () => import("./materi/3.2.-hubungan-agama-dan-negara/_page.svelte.js"), "/src/routes/materi/3.3.-indonesia-rumah-kita/+page.svelte": () => import("./materi/3.3.-indonesia-rumah-kita/_page.svelte.js") });
   let body = [];
@@ -22,7 +21,7 @@ const unitOne = getCourseUnit("1", getAllCourse());
 const unitTwo = getCourseUnit("2", getAllCourse());
 const unitThree = getCourseUnit("3", getAllCourse());
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<div class="flex flex-col p-5 text-center my-5"><img${add_attribute("src", logo, 0)} class="h-32 mb-3" alt="Sharia Banking Learn Logo">
+  return `<div class="flex flex-col p-5 text-center my-5">
 	${validate_component(Heading, "Heading").$$render(
     $$result,
     {

@@ -387,7 +387,6 @@ const NavUl = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     {}
   )}><ul${add_attribute("class", _ulClass, 0)}>${slots.default ? slots.default({}) : ``}</ul></div>`}`;
 });
-const logo = "/_app/immutable/assets/bsi_horizontal_green.c44ec9c0.svg";
 const HeadPageTitle = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let pageTitle;
   let $page, $$unsubscribe_page;
@@ -407,9 +406,6 @@ const HeadPageTitle = create_ssr_component(($$result, $$props, $$bindings, slots
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $page, $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
-  let { data } = $$props;
-  if ($$props.data === void 0 && $$bindings.data && data !== void 0)
-    $$bindings.data(data);
   $$unsubscribe_page();
   return `${validate_component(HeadPageTitle, "HeadPageTitle").$$render($$result, {}, {}, {})} 
 
@@ -417,7 +413,7 @@ ${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {
     default: ({ hidden, toggle }) => {
       return `${validate_component(NavBrand, "NavBrand").$$render($$result, { href: "/" }, {}, {
         default: () => {
-          return `<img${add_attribute("src", logo, 0)} class="mr-3 h-6 sm:h-9" alt="BSI Logo">
+          return `
 		`;
         }
       })}
