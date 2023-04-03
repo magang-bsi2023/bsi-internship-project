@@ -51,28 +51,6 @@
 			</div>
 		</NavUl>
 	</Navbar>
-	<!-- <div class="hidden md:flex w-fit h-screen ">
-		<li class="capitalize text-sm list-none px-3 py-5 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700 ">
-				<Heading tag="h1" class="font-bold" color="text-bsigreen" customSize="text-lg">Bank</Heading>
-				<div class="divide-y-2">
-					{#each unitOne as course}
-						<ol class="ml-4 py-1"><a href={course.link}>{course.title}</a></ol>
-					{/each}
-				</div>
-				<Heading tag="h1" class="font-bold" color="text-bsigreen" customSize="text-lg">Syariah</Heading>
-				<div class="divide-y-2">
-					{#each unitTwo as course}
-						<ol class="ml-4 py-1"><a href={course.link}>{course.title}</a></ol>
-					{/each}
-				</div>
-				<Heading tag="h1" class="font-bold" color="text-bsigreen" customSize="text-lg">Indonesia</Heading>
-				<div class="divide-y-2">
-					{#each unitThree as course}
-						<ol class="ml-4 py-1"><a href={course.link}>{course.title}</a></ol>
-					{/each}
-				</div>
-		</li>
-	</div> -->
 	<div class="grow">
 		<slot></slot>
 	</div>
