@@ -1,5 +1,5 @@
 <script>
-	import { Heading, NavHamburger, Navbar, NavLi, NavUl } from "flowbite-svelte";
+	import { Heading, NavHamburger, Navbar, NavLi, NavUl, Button } from "flowbite-svelte";
 	import { page } from '$app/stores';
 
 	function getAllCourse() {
@@ -26,8 +26,8 @@
 </script>
 
 <div class="flex flex-row gap-3 sm:gap-5 [&>nav]:bg-gray-50 [&>nav]:dark:bg-gray-800">
-	<Navbar navClass="capitalize absolute md:static z-10 whitespace-nowrap grow-0 px-3 py-3 small:py-5 border border-gray-200 rounded-lg dark:border-gray-700 | [&>div.container>div>ul]:bg-gray-900 [&>div.container>div>ul]:border-0 " navDivClass="" let:hidden let:toggle>
-		<NavHamburger on:click={toggle} btnClass="ml-0 visible md:hidden"></NavHamburger>
+	<Navbar navClass="capitalize absolute md:static z-10 whitespace-nowrap grow-0 px-3 py-3 small:py-5 border border-gray-200 rounded-lg dark:border-gray-700 | [&>div.container]:h-7 [&>div.container>div>ul]:bg-gray-900 [&>div.container>div>ul]:border-0 " navDivClass="" let:hidden let:toggle>
+		<Button on:click={toggle} btnClass="ml-0 visible md:hidden"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" /></svg></Button>
 		<NavUl {hidden} ulClass="mt-5 bg-gray-50 dark:bg-gray-800 [&>*]:bg-gray-50 [&>*]:dark:bg-gray-800"
 		activeClass="bg-bsigreen text-white" 
 		nonActiveClass="">
