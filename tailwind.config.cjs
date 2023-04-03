@@ -12,8 +12,11 @@ const config = {
 		},
 		colors: {
 			bsigreen: 'rgba(0,163,157)',
-			bsilgreen: 'hsl(177, 100%, 35%)',
+			bsilgreen: 'hsl(178,100%,35%)',
+			bsidgreen: 'hsl(178,100%,28%)',
 			bsiyellow: 'rgba(248,173,60)',
+			bsilyellow: 'hsl(36,93%,65%)',
+			bsidyellow: 'hsl(36,93%,50%)',
 			bsiwhite: 'rgba(255,255,255)',
 			bsigrey: 'rgba(136,139,141)'
 		}
