@@ -25,10 +25,10 @@
 	const unitThree = getCourseUnit("3", getAllCourse());
 </script>
 
-<div class="flex flex-row gap-5">
-	<Navbar navClass="capitalize whitespace-nowrap grow-0 px-3 py-5 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700" navDivClass="" let:hidden let:toggle>
-		<NavHamburger on:click={toggle}></NavHamburger>
-		<NavUl {hidden} ulClass=""
+<div class="flex flex-row gap-3 sm:gap-5 [&>nav]:bg-gray-50 [&>nav]:dark:bg-gray-800">
+	<Navbar navClass="capitalize absolute md:static z-10 whitespace-nowrap grow-0 px-3 py-3 small:py-5 border border-gray-200 rounded-lg dark:border-gray-700 | [&>div.container>div>ul]:bg-gray-900 [&>div.container>div>ul]:border-0 " navDivClass="" let:hidden let:toggle>
+		<NavHamburger on:click={toggle} btnClass="ml-0 visible md:hidden"></NavHamburger>
+		<NavUl {hidden} ulClass="mt-5 bg-gray-50 dark:bg-gray-800 [&>*]:bg-gray-50 [&>*]:dark:bg-gray-800"
 		activeClass="bg-bsigreen text-white" 
 		nonActiveClass="">
 			<Heading tag="h1" class="font-bold" color="text-bsigreen" customSize="text-lg">Bank</Heading>
