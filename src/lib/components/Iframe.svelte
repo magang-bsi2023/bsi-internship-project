@@ -19,7 +19,7 @@
 	.video-container {
 		max-width: 1250px;
 		margin-inline: auto;
-		padding: 1.5rem;
+		padding: 1rem;
 	}
 	.iframe-container {
 		position: relative;
