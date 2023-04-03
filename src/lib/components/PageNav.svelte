@@ -36,7 +36,7 @@
 	{#if getPrevLink() !== "/materi"}
 	<Button
 		href={getPrevLink()}
-		class="bg-bsiyellow hover:bg-bsidyellow hover:dark:bg-bsidyellow"
+		class="bg-bsiyellow dark:bg-bsiyellow hover:bg-bsidyellow hover:dark:bg-bsidyellow"
 	>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
