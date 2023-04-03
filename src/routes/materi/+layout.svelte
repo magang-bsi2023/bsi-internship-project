@@ -16,17 +16,43 @@
 		return body.slice(1);
 	}
 
-	function getCourseUnit(filter, arr) {
-		return arr.filter(obj => obj.title.charAt(0) === filter);
-	}
-
 	const unitOne = getCourseUnit("1", getAllCourse());
 	const unitTwo = getCourseUnit("2", getAllCourse());
 	const unitThree = getCourseUnit("3", getAllCourse());
+
+	$: getPathLevel = () =>  {
+		let pathArr = $page.url.pathname.split("/");
+		pathArr[0] = "home"
+		let body = []
+		for (let path of pathArr) {
+			let linkPath = path.replace("", "/").replace("home", "")
+			let title = path.replace(/-/g, " ")
+			body.push({
+				title: title,
+				link: linkPath
+			})
+			// let link = path.
+		}
+
+		for (let i = 2; i < body.length; i++) {
+			body[i].link = "/materi" + body[i].link;
+		}
+
+		return body.slice(1)
+	} 
+
+	function getCourseUnit(filter, arr) {
+		return arr.filter(obj => obj.title.charAt(0) === filter);
+	}
 </script>
 
+<Breadcrumb class="mb-5 hidden md:block" aria-label="Solid background breadcrumb" solid>
+    <BreadcrumbItem href="/" home>Home</BreadcrumbItem>
+	{#each getPathLevel() as path}
+	<BreadcrumbItem linkClass="capitalize ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white" href={path.link}>{path.title}</BreadcrumbItem>
+	{/each}
+</Breadcrumb>
 <div class="flex flex-col md:flex-row gap-3 sm:gap-5">
-
 	<!-- Small screen materi list navigation -->
 	<div class="md:hidden [&>nav]:z-20 [&>nav]:relative">
 		<Breadcrumb aria-label="Solid background breadcrumb" solid>
@@ -42,27 +68,28 @@
 						<Heading tag="h1" class="font-bold" color="text-bsigreen" customSize="text-lg">Bank</Heading>
 						<div class="divide-y-2 [&>li]:ml-4 [&>li>a]:py-1 [&>li>a]:px-1 [&>li>a]:dark:text-white">
 							{#each unitOne as course}
-								<NavLi class="" active={$page.url.pathname == course.link} href={course.link}>{course.title}</NavLi>
+								<NavLi on:click={toggle} class="" active={$page.url.pathname == course.link} href={course.link}>{course.title}</NavLi>
 							{/each}
 						</div>
 						<Heading tag="h1" class="font-bold" color="text-bsigreen" customSize="text-lg">Syariah</Heading>
 						<div class="divide-y-2 [&>li]:ml-4 [&>li>a]:py-1 [&>li>a]:px-1 [&>li>a]:dark:text-gray-200">
 							{#each unitTwo as course}
-								<NavLi active={$page.url.pathname == course.link} href={course.link}>{course.title}</NavLi>
+								<NavLi on:click={toggle} active={$page.url.pathname == course.link} href={course.link}>{course.title}</NavLi>
 							{/each}
 						</div>
 						<Heading tag="h1" class="font-bold" color="text-bsigreen" customSize="text-lg">Indonesia</Heading>
 						<div class="divide-y-2 [&>li]:ml-4 [&>li>a]:py-1 [&>li>a]:px-1 [&>li>a]:dark:text-gray-200">
 							{#each unitThree as course}
-								<NavLi active={$page.url.pathname == course.link} href={course.link}>{course.title}</NavLi>
+								<NavLi on:click={toggle} active={$page.url.pathname == course.link} href={course.link}>{course.title}</NavLi>
 							{/each}
 						</div>
 					</NavUl>
 				</Navbar>
 			</div>
 			<BreadcrumbItem href="/" home>Home</BreadcrumbItem>
-			<BreadcrumbItem href="/">Projects</BreadcrumbItem>
-			<BreadcrumbItem>Flowbite Svelte</BreadcrumbItem>
+			{#each getPathLevel() as path}
+			<BreadcrumbItem linkClass="capitalize ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white" href={path.link}>{path.title}</BreadcrumbItem>
+			{/each}
 		</Breadcrumb>
 	</div>
 
