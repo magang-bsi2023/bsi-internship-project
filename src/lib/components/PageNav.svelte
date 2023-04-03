@@ -36,7 +36,7 @@
 	{#if getPrevLink() !== "/materi"}
 	<Button
 		href={getPrevLink()}
-		class="bg-green-500 hover:bg-green-600 dark:bg-green-500 dark:hover:bg-green-600"
+		class="bg-bsiyellow hover:bg-bsidyellow hover:dark:bg-bsidyellow"
 	>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@
 	{#if getNextLink() !== undefined}
 	<Button
 		href={getNextLink()}
-		class="bg-green-500 hover:bg-green-600 dark:bg-green-500 dark:hover:bg-green-600"
+		class="bg-bsiyellow dark:bg-bsiyellow hover:bg-bsidyellow hover:dark:bg-bsidyellow"
 	>
 		Materi Selanjutnya
 		<svg
