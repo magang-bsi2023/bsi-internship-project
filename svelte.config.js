@@ -14,7 +14,7 @@ const config = {
 		}),
 		alias: {
 			'$routes': './src/routes',
-			'$materi': './src/routes/materi'
+			'$buku': './src/routes/buku',
 		}
 	},
 
