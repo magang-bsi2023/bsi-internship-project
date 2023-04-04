@@ -1,3 +1,6 @@
 <script>
-	import { Breadcrumb, BreadcrumbItem, Heading, Accordion, AccordionItem, Button } from 'flowbite-svelte';
+	import { Heading } from "flowbite-svelte";
+
 </script>
+
+<Heading>This is materi</Heading>
