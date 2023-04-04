@@ -2,38 +2,45 @@
 	import { page } from '$app/stores';
     import { Button } from 'flowbite-svelte';
 
+	function getCurrentBook() {
+		let currentBook = $page.url.pathname.split("/")
+		return currentBook[2]
+	};
+	
 	// Dynamic PageNav
-    function getAllCourseLink() {
-		const modules = import.meta.glob("$materi/**");
+    function getAllMateriLink() {
+		let modules = import.meta.glob(`$buku/**`);
+		// console.log(modules)
         
 		let body = [];
 		for (let path in modules) {
 			let pathSanitized = path.replace("/+page.svelte", "").replace("/src/routes/", "/");
 			body.push({
-				title: pathSanitized
+				link: pathSanitized
 			});
 		}
-
-        let linkArr = body.map(titles => titles.title);
+        let linkArr = body.map(links => links.link);
 		return linkArr;
 	}
 
+	const currentBookMateri = getAllMateriLink().filter(function (str) { return str.includes(getCurrentBook()); })
+
     const currentLink = $page.url.pathname
-    const indexOfCurrentLink =  getAllCourseLink().indexOf(currentLink);
+    const indexOfCurrentLink =  currentBookMateri.indexOf(currentLink);
 
     function getNextLink() {
         const IndexOfNextLink = indexOfCurrentLink + 1
-        return getAllCourseLink()[IndexOfNextLink]
+        return currentBookMateri[IndexOfNextLink]
     };
 
     function getPrevLink() {
         const IndexOfPrevLink = indexOfCurrentLink - 1
-        return getAllCourseLink()[IndexOfPrevLink]
+        return currentBookMateri[IndexOfPrevLink]
     }
 </script>
 
 <div class="flex justify-around">
-	{#if getPrevLink() !== "/materi"}
+	{#if getPrevLink() !== undefined}
 	<Button
 		href={getPrevLink()}
 		class="bg-bsiyellow dark:bg-bsiyellow hover:bg-bsidyellow hover:dark:bg-bsidyellow"
