@@ -17,13 +17,13 @@
 		return body.slice(1);
 	}
 
-	function getMateriUnit(filter, arr) {
+	function getBookUnit(filter, arr) {
 		return arr.filter(obj => obj.title.charAt(0) === filter);
 	}
 
-	const unitOne = getMateriUnit("1", getAllMateri());
-	const unitTwo = getMateriUnit("2", getAllMateri());
-	const unitThree = getMateriUnit("3", getAllMateri());
+	const unitOne = getBookUnit("1", getAllMateri());
+	const unitTwo = getBookUnit("2", getAllMateri());
+	const unitThree = getBookUnit("3", getAllMateri());
 
 </script>
 
