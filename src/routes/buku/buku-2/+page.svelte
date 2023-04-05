@@ -3,4 +3,4 @@
 
 </script>
 
-<Heading>Energi Baru untuk Indonesia</Heading>
+<Heading>Book 2</Heading>
