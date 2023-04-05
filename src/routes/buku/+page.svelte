@@ -37,7 +37,7 @@
 			</div>
 			<div class="grow flex items-center md:items-start md:mt-3 py-2 px-3 bg-gray-50 dark:bg-gray-800 text-gray-500 dark:text-gray-400 rounded-lg border border-gray-200 dark:border-gray-700 shadow-md">
 				<div class="md:mx-auto md:[&>*]:text-center">
-					<Heading tag="h2" customSize="text-xl" class="capitalize">{buku.title}</Heading>
+					<Heading tag="h2" customSize="text-2xl md:text-xl" class="capitalize">{buku.title}</Heading>
 					<P color="text-gray-400">This is book description</P>
 				</div>
 			</div>
