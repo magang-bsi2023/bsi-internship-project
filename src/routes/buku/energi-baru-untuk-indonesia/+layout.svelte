@@ -17,13 +17,13 @@
 		return body.slice(1);
 	}
 
-	function getMateriUnit(filter, arr) {
+	function getBookUnit(filter, arr) {
 		return arr.filter(obj => obj.title.charAt(0) === filter);
 	}
 
-	const unitOne = getMateriUnit("1", getAllMateri());
-	const unitTwo = getMateriUnit("2", getAllMateri());
-	const unitThree = getMateriUnit("3", getAllMateri());
+	const unitOne = getBookUnit("1", getAllMateri());
+	const unitTwo = getBookUnit("2", getAllMateri());
+	const unitThree = getBookUnit("3", getAllMateri());
 
 </script>
 
@@ -64,42 +64,6 @@
 				</Navbar>
 			</div>
 		</Breadcrumbs>
-		<!-- <Breadcrumb aria-label="Solid background breadcrumb" solid>
-			<div class="[&>nav]:bg-gray-50 [&>nav]:dark:bg-gray-800">
-				<Navbar navClass="mr-2 capitalize whitespace-nowrap grow-0 dark:border-gray-700 [&>div.container]:h-7
-					| [&>div.container>div>ul]:bg-gray-900 [&>div.container>div>ul]:border-0 
-					| [&>div.container>div]:absolute [&>div.container>div]:left-0 [&>div.container>div]:-z-10 [&>div.container>div]:px-3 [&>div.container>div]:pb-5 [&>div.container>div]:bg-gray-50 [&>div.container>div]:dark:bg-gray-800 [&>div.container>div]:border-x [&>div.container>div]:border-b [&>div.container>div]:border-gray-200 [&>div.container>div]:dark:border-gray-700 [&>div.container>div]:rounded-b-lg" navDivClass="" let:hidden let:toggle>
-					<Button on:click={toggle} btnClass="ml-0 visible md:hidden"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" /></svg></Button>
-					<NavUl {hidden}
-					ulClass="mt-5 bg-gray-50 dark:bg-gray-800 [&>*]:bg-gray-50 [&>*]:dark:bg-gray-800"
-					activeClass="bg-bsigreen text-white"
-					nonActiveClass="">
-						<Heading tag="h1" class="font-bold" color="text-bsigreen" customSize="text-lg">Bank</Heading>
-						<div class="divide-y-2 [&>li]:ml-4 [&>li>a]:py-1 [&>li>a]:px-1 [&>li>a]:dark:text-white">
-							{#each unitOne as course}
-								<NavLi on:click={toggle} class="" active={$page.url.pathname == course.link} href={course.link}>{course.title}</NavLi>
-							{/each}
-						</div>
-						<Heading tag="h1" class="font-bold" color="text-bsigreen" customSize="text-lg">Syariah</Heading>
-						<div class="divide-y-2 [&>li]:ml-4 [&>li>a]:py-1 [&>li>a]:px-1 [&>li>a]:dark:text-gray-200">
-							{#each unitTwo as course}
-								<NavLi on:click={toggle} active={$page.url.pathname == course.link} href={course.link}>{course.title}</NavLi>
-							{/each}
-						</div>
-						<Heading tag="h1" class="font-bold" color="text-bsigreen" customSize="text-lg">Indonesia</Heading>
-						<div class="divide-y-2 [&>li]:ml-4 [&>li>a]:py-1 [&>li>a]:px-1 [&>li>a]:dark:text-gray-200">
-							{#each unitThree as course}
-								<NavLi on:click={toggle} active={$page.url.pathname == course.link} href={course.link}>{course.title}</NavLi>
-							{/each}
-						</div>
-					</NavUl>
-				</Navbar>
-			</div>
-			<BreadcrumbItem href="/" home>Home</BreadcrumbItem>
-			{#each getPathLevel() as path}
-			<BreadcrumbItem linkClass="capitalize ml-1 text-sm font-medium text-gray-700 hover:text-gray-900 md:ml-2 dark:text-gray-400 dark:hover:text-white" href={path.link}>{path.title}</BreadcrumbItem>
-			{/each}
-		</Breadcrumb> -->
 	</div>
 
 	<!-- Big screen materi list navigation -->
