@@ -22,8 +22,6 @@
 
 	return buku;
 	}
-
-	console.log(getBuku());
 </script>
 
 <Breadcrumbs bcClass="mb-5"></Breadcrumbs>
