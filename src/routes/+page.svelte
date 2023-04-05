@@ -1,23 +1,23 @@
 <script context="module">
-	export function getAllCourse() {
-		const modules = import.meta.glob("$materi/**/**.svelte");
-		let body = [];
-		for (let path in modules) {
-			let pathSanitized = path.replace("/+page.svelte", "").replace("src/routes/", "");
-			body.push({
-				title: pathSanitized.replace("/materi/", "").replace(/-/g, " "),
-				link: pathSanitized
-			});
-		}
-		return body;
-	}
-	function getCourseUnit(filter, arr) {
-		return arr.filter(obj => obj.title.charAt(0) === filter);
-	}
+	// export function getAllCourse() {
+	// 	const modules = import.meta.glob("$materi/**/**.svelte");
+	// 	let body = [];
+	// 	for (let path in modules) {
+	// 		let pathSanitized = path.replace("/+page.svelte", "").replace("src/routes/", "");
+	// 		body.push({
+	// 			title: pathSanitized.replace("/materi/", "").replace(/-/g, " "),
+	// 			link: pathSanitized
+	// 		});
+	// 	}
+	// 	return body;
+	// }
+	// function getCourseUnit(filter, arr) {
+	// 	return arr.filter(obj => obj.title.charAt(0) === filter);
+	// }
 
-	const unitOne = getCourseUnit("1", getAllCourse());
-	const unitTwo = getCourseUnit("2", getAllCourse());
-	const unitThree = getCourseUnit("3", getAllCourse());
+	// const unitOne = getCourseUnit("1", getAllCourse());
+	// const unitTwo = getCourseUnit("2", getAllCourse());
+	// const unitThree = getCourseUnit("3", getAllCourse());
 </script>
 
 <script>
@@ -29,12 +29,12 @@
 <div class="flex flex-col p-5 text-center my-5">
 	<img src={logo} class="h-32 mb-3" alt="bsi Logo" />
 	<Heading tag="h1" customSize="text-4xl font-semibold" color="text-bsiyellow" class="mb-5">
-		Energi Baru Untuk Indonesia
+		Library
 	</Heading>
 	<!-- <P class="dark:text-gray-400 text-center capitalize">{data.page.tagline}</P> -->
 </div>
 
-<div
+<!-- <div
 	class="flex flex-col bg-gray-50 dark:bg-gray-800 content-center p-5 border rounded-lg dark:border-gray-600"
 >
 	<Accordion
@@ -97,4 +97,4 @@
 			</div>
 		</AccordionItem>
 	</Accordion>
-</div>
+</div> -->
