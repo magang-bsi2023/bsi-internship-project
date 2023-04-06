@@ -11,6 +11,8 @@
 			title={title}
 			class="responsive-iframe"
 			src={src}
+			allowfullscreen="allowfullscreen" 
+			allow="fullscreen"
 		/>
 	</div>
 </div>
