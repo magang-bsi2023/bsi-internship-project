@@ -1,5 +1,5 @@
 <script>
-	import { Heading, Card, P } from "flowbite-svelte";
+	import { Heading, P } from "flowbite-svelte";
 	import Breadcrumbs from "$lib/components/Breadcrumbs.svelte";
 
 	function getBuku() {
