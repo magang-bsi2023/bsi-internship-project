@@ -6,12 +6,12 @@
 	import { onDestroy } from 'svelte';
 
 	function getBuku() {
-	const modules = import.meta.glob(["$buku/*/+page.svelte", "$lib/assets/book-cover/*"]);
+	const modules = import.meta.glob(["$buku/*/+page.svelte", "/img/book-cover/*"]);
 	const buku = [];
 
 	for (let path in modules) {
 		const pathSanitized = path.replace("/+page.svelte", "").replace("/src/routes/", "/");
-		const imgPath = pathSanitized.replace("/buku/", "src/lib/assets/book-cover/").concat(".jpg");
+		const imgPath = pathSanitized.replace("/buku/", "img/book-cover/").concat(".jpg");
 		const isSvelteFile = path.endsWith("+page.svelte");
 
 		if (isSvelteFile) {
