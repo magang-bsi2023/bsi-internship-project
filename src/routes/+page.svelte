@@ -3,28 +3,9 @@
 	import logo from '$lib/assets/logo/bsilib.svg';
 	import { createSearchStore } from '$lib/stores/search'
 	import { searchHandler } from '$lib/stores/search.js';
+	import { getBuku } from '$lib/utils/getBook.js';
 	import { onDestroy } from 'svelte';
 	export let data;
-
-	function getBuku() {
-	const modules = import.meta.glob(["$buku/*/+page.svelte", "/img/book-cover/*"]);
-	const buku = [];
-
-	for (let path in modules) {
-		const pathSanitized = path.replace("/+page.svelte", "").replace("/src/routes/", "/");
-		const imgPath = pathSanitized.replace("/buku/", "img/book-cover/").concat(".jpg");
-		const isSvelteFile = path.endsWith("+page.svelte");
-
-		if (isSvelteFile) {
-			buku.push({
-				title: pathSanitized.replace("/buku/", "").replace(/-/g, " "),
-				link: pathSanitized,
-				img: imgPath
-			})
-		} 
-	}
-	return buku;
-	}
 
 	const searchBuku = getBuku().map((buku) => ({
 		...buku,
