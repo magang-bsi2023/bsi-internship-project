@@ -43,7 +43,7 @@
 	</NavUl>
 </Navbar>
 
-<div class="container mx-auto px-2 sm:px-0 py-2.5 w-full">
+<div class="container mx-auto px-3 py-2.5 w-full">
 	<slot />
 </div>
 
