@@ -15,6 +15,8 @@ const config = {
 		alias: {
 			'$routes': './src/routes',
 			'$buku': './src/routes/buku',
+			'$static': './static',
+			'$img': './static/img',
 		}
 	},
 
