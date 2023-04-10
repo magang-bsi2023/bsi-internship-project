@@ -43,6 +43,9 @@ function get_current_component() {
     throw new Error("Function called outside component initialization");
   return current_component;
 }
+function onDestroy(fn) {
+  get_current_component().$$.on_destroy.push(fn);
+}
 function setContext(key, context) {
   get_current_component().$$.context.set(key, context);
   return context;
@@ -240,13 +243,14 @@ export {
   escape as f,
   getContext as g,
   add_attribute as h,
-  is_void as i,
-  subscribe as j,
-  each as k,
+  subscribe as i,
+  each as j,
+  is_void as k,
   compute_slots as l,
   missing_component as m,
   noop as n,
-  safe_not_equal as o,
+  onDestroy as o,
+  safe_not_equal as p,
   setContext as s,
   validate_component as v
 };

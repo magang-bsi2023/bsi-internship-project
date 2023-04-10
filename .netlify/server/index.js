@@ -44,7 +44,12 @@ function is_content_type(request, ...types) {
   return types.includes(type);
 }
 function is_form_content_type(request) {
-  return is_content_type(request, "application/x-www-form-urlencoded", "multipart/form-data");
+  return is_content_type(
+    request,
+    "application/x-www-form-urlencoded",
+    "multipart/form-data",
+    "text/plain"
+  );
 }
 let HttpError = class HttpError2 {
   /**
@@ -151,7 +156,8 @@ function allowed_methods(mod) {
   return allowed;
 }
 function static_error_page(options2, status, message) {
-  return text(options2.templates.error({ status, message }), {
+  let page = options2.templates.error({ status, message });
+  return text(page, {
     headers: { "content-type": "text/html; charset=utf-8" },
     status
   });
@@ -501,7 +507,7 @@ async function call_action(event, actions) {
   }
   if (!is_form_content_type(event.request)) {
     throw new Error(
-      `Actions expect form-encoded data (received ${event.request.headers.get("content-type")}`
+      `Actions expect form-encoded data (received ${event.request.headers.get("content-type")})`
     );
   }
   return action(event);
@@ -2405,7 +2411,7 @@ const default_preload = ({ type }) => type === "js" || type === "css";
 async function respond(request, options2, manifest, state) {
   let url = new URL(request.url);
   if (options2.csrf_check_origin) {
-    const forbidden = request.method === "POST" && request.headers.get("origin") !== url.origin && is_form_content_type(request);
+    const forbidden = is_form_content_type(request) && (request.method === "POST" || request.method === "PUT" || request.method === "PATCH" || request.method === "DELETE") && request.headers.get("origin") !== url.origin;
     if (forbidden) {
       const csrf_error = error(403, `Cross-site ${request.method} form submissions are forbidden`);
       if (request.headers.get("accept") === "application/json") {

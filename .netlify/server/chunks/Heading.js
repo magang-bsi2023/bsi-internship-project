@@ -1,4 +1,4 @@
-import { c as create_ssr_component, a as compute_rest_props, b as spread, e as escape_object, d as escape_attribute_value, i as is_void } from "./index2.js";
+import { c as create_ssr_component, a as compute_rest_props, b as spread, e as escape_object, d as escape_attribute_value, k as is_void } from "./index2.js";
 import classNames from "classnames";
 const Heading = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$restProps = compute_rest_props($$props, ["tag", "color", "customSize"]);

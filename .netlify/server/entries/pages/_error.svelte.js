@@ -1,4 +1,4 @@
-import { c as create_ssr_component, j as subscribe, v as validate_component, f as escape } from "../../chunks/index2.js";
+import { c as create_ssr_component, i as subscribe, v as validate_component, f as escape } from "../../chunks/index2.js";
 import "classnames";
 import { B as Button } from "../../chunks/Button.js";
 /* empty css                                                    */import { H as Heading } from "../../chunks/Heading.js";

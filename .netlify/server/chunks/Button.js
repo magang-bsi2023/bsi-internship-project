@@ -1,4 +1,4 @@
-import { c as create_ssr_component, a as compute_rest_props, g as getContext, b as spread, d as escape_attribute_value, e as escape_object, i as is_void, h as add_attribute } from "./index2.js";
+import { c as create_ssr_component, a as compute_rest_props, g as getContext, b as spread, d as escape_attribute_value, e as escape_object, k as is_void, h as add_attribute } from "./index2.js";
 import classNames from "classnames";
 const Button = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$restProps = compute_rest_props($$props, ["pill", "outline", "gradient", "size", "href", "btnClass", "type", "color", "shadow"]);

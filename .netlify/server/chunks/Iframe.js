@@ -1,9 +1,8 @@
-import { c as create_ssr_component, a as compute_rest_props, g as getContext, h as add_attribute, b as spread, e as escape_object, d as escape_attribute_value, f as escape, s as setContext, j as subscribe, v as validate_component } from "./index2.js";
+import { c as create_ssr_component, a as compute_rest_props, g as getContext, h as add_attribute, b as spread, e as escape_object, d as escape_attribute_value, f as escape, s as setContext, i as subscribe, v as validate_component } from "./index2.js";
 import { p as page } from "./stores.js";
 import classNames from "classnames";
 import { B as Button } from "./Button.js";
-/* empty css                                         */import { B as Breadcrumb, a as BreadcrumbItem } from "./BreadcrumbItem.js";
-import { w as writable } from "./index.js";
+/* empty css                                         */import { w as writable } from "./index.js";
 import { H as Heading } from "./Heading.js";
 const TabItem = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$restProps = compute_rest_props($$props, ["open", "title", "activeClasses", "inactiveClasses", "defaultClass"]);
@@ -90,35 +89,42 @@ ${divider ? `${slots.divider ? slots.divider({ style }) : `
   `}` : ``}
 <div${add_attribute("class", contentClass, 0)} role="tabpanel" aria-labelledby="id-tab"></div>`;
 });
-function getAllCourseLink() {
-  const modules = /* @__PURE__ */ Object.assign({ "/src/routes/materi/+page.svelte": () => import("../entries/pages/materi/_page.svelte.js"), "/src/routes/materi/1.1.-barter-dan-uang/+page.svelte": () => import("../entries/pages/materi/1.1.-barter-dan-uang/_page.svelte.js"), "/src/routes/materi/1.2.-sejarah-dan-awal-praktik-bank/+page.svelte": () => import("../entries/pages/materi/1.2.-sejarah-dan-awal-praktik-bank/_page.svelte.js"), "/src/routes/materi/1.3.-mengapa-negara-perlu-bank/+page.svelte": () => import("../entries/pages/materi/1.3.-mengapa-negara-perlu-bank/_page.svelte.js"), "/src/routes/materi/1.4.-kehadiran-bank-bagi-masyarakat/+page.svelte": () => import("../entries/pages/materi/1.4.-kehadiran-bank-bagi-masyarakat/_page.svelte.js"), "/src/routes/materi/1.5.-evolusi-perbankan/+page.svelte": () => import("../entries/pages/materi/1.5.-evolusi-perbankan/_page.svelte.js"), "/src/routes/materi/1.6.-masa-depan-bank/+page.svelte": () => import("../entries/pages/materi/1.6.-masa-depan-bank/_page.svelte.js"), "/src/routes/materi/1.7.-integritas-bankir/+page.svelte": () => import("../entries/pages/materi/1.7.-integritas-bankir/_page.svelte.js"), "/src/routes/materi/2.1.-kearifan-lokal/+page.svelte": () => import("../entries/pages/materi/2.1.-kearifan-lokal/_page.svelte.js"), "/src/routes/materi/2.2.-apa-itu-syariah/+page.svelte": () => import("../entries/pages/materi/2.2.-apa-itu-syariah/_page.svelte.js"), "/src/routes/materi/2.3.-bank-syariah/+page.svelte": () => import("../entries/pages/materi/2.3.-bank-syariah/_page.svelte.js"), "/src/routes/materi/2.4.-sejarah-bank-syariah-di-indonesia/+page.svelte": () => import("../entries/pages/materi/2.4.-sejarah-bank-syariah-di-indonesia/_page.svelte.js"), "/src/routes/materi/2.5.-masa-depan-bank-syariah/+page.svelte": () => import("../entries/pages/materi/2.5.-masa-depan-bank-syariah/_page.svelte.js"), "/src/routes/materi/3.1.-genelogi-bangsa-indonesia/+page.svelte": () => import("../entries/pages/materi/3.1.-genelogi-bangsa-indonesia/_page.svelte.js"), "/src/routes/materi/3.2.-hubungan-agama-dan-negara/+page.svelte": () => import("../entries/pages/materi/3.2.-hubungan-agama-dan-negara/_page.svelte.js"), "/src/routes/materi/3.3.-indonesia-rumah-kita/+page.svelte": () => import("../entries/pages/materi/3.3.-indonesia-rumah-kita/_page.svelte.js") });
+function getAllMateriLink() {
+  let modules = /* @__PURE__ */ Object.assign({ "/src/routes/buku/+page.svelte": () => import("../entries/pages/buku/_page.svelte.js"), "/src/routes/buku/buku-2/+layout.svelte": () => import("../entries/pages/buku/buku-2/_layout.svelte.js"), "/src/routes/buku/buku-2/+page.svelte": () => import("../entries/pages/buku/buku-2/_page.svelte.js"), "/src/routes/buku/buku-2/1.1.-subtitle1/+page.svelte": () => import("../entries/pages/buku/buku-2/1.1.-subtitle1/_page.svelte.js"), "/src/routes/buku/buku-2/1.2.-subtitle2/+page.svelte": () => import("../entries/pages/buku/buku-2/1.2.-subtitle2/_page.svelte.js"), "/src/routes/buku/buku-2/1.3.-subtitle3/+page.svelte": () => import("../entries/pages/buku/buku-2/1.3.-subtitle3/_page.svelte.js"), "/src/routes/buku/energi-baru-untuk-indonesia/+layout.svelte": () => import("../entries/pages/buku/energi-baru-untuk-indonesia/_layout.svelte.js"), "/src/routes/buku/energi-baru-untuk-indonesia/+page.svelte": () => import("../entries/pages/buku/energi-baru-untuk-indonesia/_page.svelte.js"), "/src/routes/buku/energi-baru-untuk-indonesia/1.1.-barter-dan-uang/+page.svelte": () => import("../entries/pages/buku/energi-baru-untuk-indonesia/1.1.-barter-dan-uang/_page.svelte.js"), "/src/routes/buku/energi-baru-untuk-indonesia/1.2.-sejarah-dan-awal-praktik-bank/+page.svelte": () => import("../entries/pages/buku/energi-baru-untuk-indonesia/1.2.-sejarah-dan-awal-praktik-bank/_page.svelte.js"), "/src/routes/buku/energi-baru-untuk-indonesia/1.3.-mengapa-negara-perlu-bank/+page.svelte": () => import("../entries/pages/buku/energi-baru-untuk-indonesia/1.3.-mengapa-negara-perlu-bank/_page.svelte.js"), "/src/routes/buku/energi-baru-untuk-indonesia/1.4.-kehadiran-bank-bagi-masyarakat/+page.svelte": () => import("../entries/pages/buku/energi-baru-untuk-indonesia/1.4.-kehadiran-bank-bagi-masyarakat/_page.svelte.js"), "/src/routes/buku/energi-baru-untuk-indonesia/1.5.-evolusi-perbankan/+page.svelte": () => import("../entries/pages/buku/energi-baru-untuk-indonesia/1.5.-evolusi-perbankan/_page.svelte.js"), "/src/routes/buku/energi-baru-untuk-indonesia/1.6.-masa-depan-bank/+page.svelte": () => import("../entries/pages/buku/energi-baru-untuk-indonesia/1.6.-masa-depan-bank/_page.svelte.js"), "/src/routes/buku/energi-baru-untuk-indonesia/1.7.-integritas-bankir/+page.svelte": () => import("../entries/pages/buku/energi-baru-untuk-indonesia/1.7.-integritas-bankir/_page.svelte.js"), "/src/routes/buku/energi-baru-untuk-indonesia/2.1.-kearifan-lokal/+page.svelte": () => import("../entries/pages/buku/energi-baru-untuk-indonesia/2.1.-kearifan-lokal/_page.svelte.js"), "/src/routes/buku/energi-baru-untuk-indonesia/2.2.-apa-itu-syariah/+page.svelte": () => import("../entries/pages/buku/energi-baru-untuk-indonesia/2.2.-apa-itu-syariah/_page.svelte.js"), "/src/routes/buku/energi-baru-untuk-indonesia/2.3.-bank-syariah/+page.svelte": () => import("../entries/pages/buku/energi-baru-untuk-indonesia/2.3.-bank-syariah/_page.svelte.js"), "/src/routes/buku/energi-baru-untuk-indonesia/2.4.-sejarah-bank-syariah-di-indonesia/+page.svelte": () => import("../entries/pages/buku/energi-baru-untuk-indonesia/2.4.-sejarah-bank-syariah-di-indonesia/_page.svelte.js"), "/src/routes/buku/energi-baru-untuk-indonesia/2.5.-masa-depan-bank-syariah/+page.svelte": () => import("../entries/pages/buku/energi-baru-untuk-indonesia/2.5.-masa-depan-bank-syariah/_page.svelte.js"), "/src/routes/buku/energi-baru-untuk-indonesia/3.1.-genelogi-bangsa-indonesia/+page.svelte": () => import("../entries/pages/buku/energi-baru-untuk-indonesia/3.1.-genelogi-bangsa-indonesia/_page.svelte.js"), "/src/routes/buku/energi-baru-untuk-indonesia/3.2.-hubungan-agama-dan-negara/+page.svelte": () => import("../entries/pages/buku/energi-baru-untuk-indonesia/3.2.-hubungan-agama-dan-negara/_page.svelte.js"), "/src/routes/buku/energi-baru-untuk-indonesia/3.3.-indonesia-rumah-kita/+page.svelte": () => import("../entries/pages/buku/energi-baru-untuk-indonesia/3.3.-indonesia-rumah-kita/_page.svelte.js") });
   let body = [];
   for (let path in modules) {
     let pathSanitized = path.replace("/+page.svelte", "").replace("/src/routes/", "/");
-    body.push({ title: pathSanitized });
+    body.push({ link: pathSanitized });
   }
-  let linkArr = body.map((titles) => titles.title);
+  let linkArr = body.map((links) => links.link);
   return linkArr;
 }
 const PageNav = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $page, $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
+  function getCurrentBook() {
+    let currentBook = $page.url.pathname.split("/");
+    return currentBook[2];
+  }
+  const currentBookMateri = getAllMateriLink().filter(function(str) {
+    return str.includes(getCurrentBook());
+  });
   const currentLink = $page.url.pathname;
-  const indexOfCurrentLink = getAllCourseLink().indexOf(currentLink);
+  const indexOfCurrentLink = currentBookMateri.indexOf(currentLink);
   function getNextLink() {
     const IndexOfNextLink = indexOfCurrentLink + 1;
-    return getAllCourseLink()[IndexOfNextLink];
+    return currentBookMateri[IndexOfNextLink];
   }
   function getPrevLink() {
     const IndexOfPrevLink = indexOfCurrentLink - 1;
-    return getAllCourseLink()[IndexOfPrevLink];
+    return currentBookMateri[IndexOfPrevLink];
   }
   $$unsubscribe_page();
-  return `<div class="flex justify-around">${getPrevLink() !== "/materi" ? `${validate_component(Button, "Button").$$render(
+  return `<div class="flex justify-around">${getPrevLink() !== void 0 ? `${validate_component(Button, "Button").$$render(
     $$result,
     {
       href: getPrevLink(),
-      class: "bg-green-500 hover:bg-green-600 dark:bg-green-500 dark:hover:bg-green-600"
+      class: "bg-bsiyellow dark:bg-bsiyellow hover:bg-bsidyellow hover:dark:bg-bsidyellow"
     },
     {},
     {
@@ -133,7 +139,7 @@ const PageNav = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$result,
     {
       href: getNextLink(),
-      class: "bg-green-500 hover:bg-green-600 dark:bg-green-500 dark:hover:bg-green-600"
+      class: "bg-bsiyellow dark:bg-bsiyellow hover:bg-bsidyellow hover:dark:bg-bsidyellow"
     },
     {},
     {
@@ -159,36 +165,6 @@ const PageTitle = create_ssr_component(($$result, $$props, $$bindings, slots) =>
   $$unsubscribe_page();
   return `${escape(pageTitle())}`;
 });
-const BcCourse = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `${validate_component(Breadcrumb, "Breadcrumb").$$render(
-    $$result,
-    {
-      class: "mb-5",
-      "aria-label": "Solid background breadcrumb",
-      solid: true
-    },
-    {},
-    {
-      default: () => {
-        return `${validate_component(BreadcrumbItem, "BreadcrumbItem").$$render($$result, { href: "/", home: true }, {}, {
-          default: () => {
-            return `Home`;
-          }
-        })}
-    ${validate_component(BreadcrumbItem, "BreadcrumbItem").$$render($$result, { href: "/materi" }, {}, {
-          default: () => {
-            return `Materi`;
-          }
-        })}
-    ${validate_component(BreadcrumbItem, "BreadcrumbItem").$$render($$result, {}, {}, {
-          default: () => {
-            return `${validate_component(PageTitle, "PageTitle").$$render($$result, {}, {}, {})}`;
-          }
-        })}`;
-      }
-    }
-  )}`;
-});
 const Evaluasi = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { src } = $$props;
   if ($$props.src === void 0 && $$bindings.src && src !== void 0)
@@ -197,7 +173,7 @@ const Evaluasi = create_ssr_component(($$result, $$props, $$bindings, slots) => 
 });
 const MateriLayout_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: "button.active{color:rgb(22 163 74) !important;border-color:rgb(22 163 74) !important;background-color:rgb(22, 163, 74, 0.1) !important;border-radius:0.5rem 0.5rem 0 0}",
+  code: "button.active{color:rgba(0,163,157) !important;border-color:rgba(0,163,157) !important;background-color:rgba(0,163,157,0.1) !important;border-radius:0.5rem 0.5rem 0 0}",
   map: null
 };
 const MateriLayout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -205,10 +181,7 @@ const MateriLayout = create_ssr_component(($$result, $$props, $$bindings, slots)
   if ($$props.linkEvaluasi === void 0 && $$bindings.linkEvaluasi && linkEvaluasi !== void 0)
     $$bindings.linkEvaluasi(linkEvaluasi);
   $$result.css.add(css$1);
-  return `${validate_component(BcCourse, "BcCourse").$$render($$result, {}, {}, {})}
-
-
-<div class="[&>:nth-child(3)]:bg-transparent [&>:nth-child(3)]:dark:bg-transparent [&>:nth-child(3)]:mt-0 [&>:nth-child(3)]:px-0">${validate_component(Tabs, "Tabs").$$render(
+  return `<div class="[&>:nth-child(3)]:bg-transparent [&>:nth-child(3)]:dark:bg-transparent [&>:nth-child(3)]:mt-0 [&>:nth-child(3)]:px-0">${validate_component(Tabs, "Tabs").$$render(
     $$result,
     {
       style: "underline",
@@ -229,7 +202,8 @@ const MateriLayout = create_ssr_component(($$result, $$props, $$bindings, slots)
               {
                 tag: "h1",
                 customSize: "text-2xl",
-                class: "capitalize text-bsigreen font-bold dark:text-bsigreen mb-1"
+                color: "text-bsigreen dark:text-bsigreen",
+                class: "capitalize font-bold mb-1"
               },
               {},
               {
@@ -243,7 +217,7 @@ const MateriLayout = create_ssr_component(($$result, $$props, $$bindings, slots)
               $$result,
               {
                 size: "xl",
-                class: "flex gap-1 w-1/4 bg-green-600"
+                class: "flex gap-1 w-1/4 bg-bsigreen dark:bg-bsigreen hover:bg-bsidgreen hover:dark:bg-bsidgreen"
               },
               {},
               {
@@ -263,18 +237,18 @@ const MateriLayout = create_ssr_component(($$result, $$props, $$bindings, slots)
 		</div>`;
           },
           default: () => {
-            return `${validate_component(Evaluasi, "Evaluasi").$$render($$result, { title: "evaluasi", src: linkEvaluasi }, {}, {})}
-		${validate_component(PageNav, "PageNav").$$render($$result, {}, {}, {})}`;
+            return `${validate_component(Evaluasi, "Evaluasi").$$render($$result, { title: "evaluasi", src: linkEvaluasi }, {}, {})}`;
           }
         })}`;
       }
     }
-  )}
-</div>`;
+  )}</div>
+
+${validate_component(PageNav, "PageNav").$$render($$result, {}, {}, {})}`;
 });
 const Iframe_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".video-container.svelte-169gp15{max-width:1250px;margin-inline:auto;padding:1.5rem}.iframe-container.svelte-169gp15{position:relative;overflow:hidden;width:100%;padding-top:56.25%}.responsive-iframe.svelte-169gp15{position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%}",
+  code: ".video-container.svelte-1x86aha{max-width:1250px;margin-inline:auto;padding:1rem}.iframe-container.svelte-1x86aha{position:relative;overflow:hidden;width:100%;padding-top:56.25%}.responsive-iframe.svelte-1x86aha{position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%}",
   map: null
 };
 const Iframe = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -285,7 +259,7 @@ const Iframe = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   if ($$props.src === void 0 && $$bindings.src && src !== void 0)
     $$bindings.src(src);
   $$result.css.add(css);
-  return `<div class="video-container my-5 border bg-gray-50 dark:bg-gray-800 rounded-lg border-gray-200 dark:border-gray-700 svelte-169gp15"><div class="iframe-container svelte-169gp15"><iframe${add_attribute("title", title, 0)} class="responsive-iframe svelte-169gp15"${add_attribute("src", src, 0)}></iframe></div>
+  return `<div class="video-container my-5 border bg-gray-50 dark:bg-gray-800 rounded-lg border-gray-200 dark:border-gray-700 svelte-1x86aha"><div class="iframe-container svelte-1x86aha"><iframe${add_attribute("title", title, 0)} class="responsive-iframe svelte-1x86aha"${add_attribute("src", src, 0)} allowfullscreen="allowfullscreen" allow="fullscreen"></iframe></div>
 </div>`;
 });
 export {
