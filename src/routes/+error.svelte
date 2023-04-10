@@ -10,5 +10,5 @@
     </svg>      
     <Heading class="mb-3" tag="h1" customSize="text-2xl">Terjadi Kesalahan</Heading>
     <P class="text-center mb-5">Error: {$page.error.message}</P>
-    <Button class="mx-auto bg-bsigreen" href="/">Home</Button>
+    <Button class="mx-auto bg-bsigreen dark:bg-bsigreen hover:bg-bsidgreen dark:hover:bg-bsidgreen" href="/">Home</Button>
 </div>
