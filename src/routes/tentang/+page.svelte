@@ -26,7 +26,7 @@
         <img src="https://as1.ftcdn.net/v2/jpg/01/63/11/70/1000_F_163117064_syJkTuCddASYjvl4WqyRmnuy8cDXpoQY.jpg" alt="foto pengembang"
         class="w-40 mb-3 rounded-full border-2 border-bsigreen mx-auto">
         <Heading class="font-bold text-bsidgreen dark:text-bsilgreen" color="" tag="h3" customSize="text-lg">
-            Fadhila Azizah Hasan
+            Fadhilah Azizah Hasan
         </Heading>
         <p class="text-gray-600 dark:text-gray-400 text-sm mb-2">Pengembang Video</p>
         <a class="flex mt-2 py-2 justify-center gap-2 items-center rounded-t-lg border-x-2 border-t-2 border-gray-200 dark:border-gray-700" href="https://www.instagram.com/dhila.zh/" target="_blank">
