@@ -4,7 +4,7 @@
 </script>
 
 <div
-	class="video-container my-5 border bg-gray-50 dark:bg-gray-800 rounded-lg border-gray-200 dark:border-gray-700"
+	class="video-container p-4 md:p-3 lg:p-4 my-5 border bg-gray-50 dark:bg-gray-800 rounded-lg border-gray-200 dark:border-gray-700"
 >
 	<div class="iframe-container">
 		<iframe
@@ -21,7 +21,6 @@
 	.video-container {
 		max-width: 1250px;
 		margin-inline: auto;
-		padding: 1rem;
 	}
 	.iframe-container {
 		position: relative;
