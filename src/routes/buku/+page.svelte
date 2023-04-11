@@ -1,12 +1,30 @@
 <script>
 	import { Heading, Input, P } from "flowbite-svelte";
 	import Breadcrumbs from "$lib/components/Breadcrumbs.svelte";
-	import { createSearchStore } from '$lib/stores/search'
+	import { writable } from 'svelte/store'
+	// import { createSearchStore } from '$lib/stores/search'
 	import { searchHandler } from '$lib/stores/search.js';
 	import { getBuku } from '$lib/utils/getBook.js';
 	import { onDestroy } from 'svelte';
+	import { page } from "$app/stores";
 
-	// Search Function
+	let searchQuery = $page.url.searchParams.get("q")
+
+	export const createSearchStore = (data) => {
+		const { subscribe, set, update } = writable({
+			data: data,
+			filtered: data,
+			search: searchQuery || "",
+		})
+
+		return {
+			subscribe,
+			set,
+			update,
+		}
+	}
+
+	// Search filter function from this tutorial https://youtu.be/lrzHaTcpRh8
 	const searchBuku = getBuku().map((buku) => ({
 		...buku,
 		searchTerms: `${buku.title}`
@@ -24,7 +42,8 @@
 	<Heading tag="h1" customSize="text-3xl" color="text-bsigreen" class="font-bold">Daftar Buku</Heading>
 	<div class="flex flex-row items-center px-2 bg-gray-50 dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 focus-within:border-bsiyellow focus-within:dark:border-bsiyellow rounded-full">
 		<svg class="w-7 h-7 stroke-bsiyellow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>
-		<input class="-ml-2 border-0 focus:ring-0 bg-transparent dark:text-white" type="search" placeholder="Cari buku..." bind:value={$searchStore.search}>
+		<input class="-ml-2 border-0 focus:ring-0 bg-transparent dark:text-white" 
+		type="search" placeholder="Cari buku..." bind:value={$searchStore.search}>
 	</div>
 </div>
 
