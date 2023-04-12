@@ -15,5 +15,5 @@
 </script>
 
 <svelte:head>
-    <title>{pageTitle()}</title>
+    <title>{pageTitle()} - BSI Library</title>
 </svelte:head>
