@@ -9,6 +9,7 @@
 	<Heading tag="h1" customSize="text-4xl font-semibold" color="text-bsiyellow">
 		{data.page.title}
 	</Heading>
+	<P class="mx-auto mt-2 italic">{data.page.tagline}</P>
 </div>
 
 <div class="my-5">

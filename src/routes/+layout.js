@@ -5,7 +5,7 @@ export function load({ params }) {
     return {
         page: {
             title: "BSI Library",
-            tagline: "ini tagline",
+            tagline: "Jelajahi Dunia Perbankan Syariah dengan BSI Library",
         }
     };
 }
