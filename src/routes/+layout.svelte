@@ -53,7 +53,7 @@
 		ulClass="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0"
 	>
 		<FooterLink href="/tentang">Tentang</FooterLink>
-		<FooterLink href="/kontak">Kontak</FooterLink>
+		<FooterLink href="/tentang#hubungi">Hubungi Kami</FooterLink>
 	</FooterLinkGroup>
 </Footer>
 
