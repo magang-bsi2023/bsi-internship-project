@@ -1,5 +1,5 @@
 <script>
-    import { Heading, P } from 'flowbite-svelte';
+    import { Heading, P, Hr } from 'flowbite-svelte';
     import logo from '$lib/assets/logo/bsilib.svg';
     import bsi from '$lib/assets/bsi-logo/bsi_horizontal_green.svg'
     import mbkm from '$lib/assets/tentang/kampusmerdeka.png'
@@ -25,11 +25,11 @@
     BSI Library merupakan sebuah website edukasi yang didedikasikan untuk mengenalkan dunia perbankan syariah dan Bank Syariah Indonesia. BSI Library menyajikan konten-konten yang berupa buku-buku yang dirangkum ke dalam berbagai media pembelajaran yang menarik, seperti video, animasi, infografis, dan banyak lagi. Diharapkan BSI Library dapat memperluas pengetahuan masyarakat Indonesia tentang perbankan syariah dan meningkatkan kesadaran akan produk dan layanan yang ditawarkan oleh Bank Syariah Indonesia.
 </P>
 
-<div class="flex w-fit mx-auto justify-evenly mb-5 gap-10 items-center py-5 px-10 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-    <div class="w-52"><img class="w-full h-full" src={bsi} alt="logo bsi"></div>
-    <div class="w-52"><img class="w-full h-full" src={mbkm} alt="logo mbkm"></div>
-    <div class="w-52 dark:hidden"><img class="w-full h-full" src={msib} alt="logo msib"></div>
-    <div class="w-52 hidden dark:block"><img class="w-full h-full" src={msibwhite} alt="logo msib"></div>
+<div class="flex w-fit mx-auto justify-evenly [&>div]:w-full [&>div]:md:w-52 mb-5 gap-10 items-center py-5 px-10 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+    <div class=""><img class="w-full h-full" src={bsi} alt="logo bsi"></div>
+    <div class=""><img class="w-full h-full" src={mbkm} alt="logo mbkm"></div>
+    <div class=" dark:hidden"><img class="w-full h-full" src={msib} alt="logo msib"></div>
+    <div class=" hidden dark:block"><img class="w-full h-full" src={msibwhite} alt="logo msib"></div>
 </div>
 
 <Heading class="mb-5 text-center font-bold text-bsigreen dark:text-bsigreen" tag="h2" color="" customSize="text-2xl">Latar Belakang</Heading>
@@ -91,15 +91,16 @@
     </div>
 </div>
 
+<Hr class="my-10"></Hr>
 
-<div class="border rounded-lg border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700 py-5 px-2">
+<div class="w-fit mx-auto border rounded-lg border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700 py-5 px-2">
     <Heading id="hubungi" class="mb-5 text-center font-bold text-bsigreen dark:text-bsigreen" tag="h2" color="" customSize="text-2xl">Hubungi Kami</Heading>
-    <div class="flex w-fit mx-auto ">
-        <div class="relative w-[30rem] h-[50vh]">
+    <div class="flex flex-wrap justify-center w-fit mx-auto">
+        <div class="relative w-screen md:w-[50vw] h-[55vh]">
             <iframe title="evaluasi" class="absolute w-full h-full" src="https://docs.google.com/forms/d/e/1FAIpQLSerwZpzk-TLthhSFN3FjgC_j5fcMuerXBgXplzu9_jPPuCMvg/viewform?embedded=true">Loading…</iframe>
         </div>
         <div class="w-fit px-5">
-            <Heading class="mt-20 mb-1 font-bold text-bsidgreen dark:text-bsilgreen" color="" tag="h4" customSize="text-lg">Email</Heading>
+            <Heading class="my-10 md:mt-20 mb-1 font-bold text-bsidgreen dark:text-bsilgreen" color="" tag="h4" customSize="text-lg">Email</Heading>
             <P>
                 <a class="flex items-center gap-1" href="mailto:magang.bsi2023@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg> magang.bsi2023@gmail.com</a>
