@@ -40,7 +40,7 @@
 
 <Heading class="mb-5 text-center font-bold text-bsigreen dark:text-bsigreen" tag="h2" color="" customSize="text-2xl">Pengembang</Heading>
 
-<div class="flex flex-wrap justify-evenly mb-10 gap-5 [&>div]:w-60">
+<div class="flex flex-wrap justify-evenly mb-10 gap-5 [&>div]:w-56 md:[&>div]:w-60">
     <div class="flex flex-col justify-center text-center px-5 pt-5 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
         <img src={fadhilah} alt="foto pengembang"
         class="w-40 mb-3 rounded-full border-2 border-bsigreen mx-auto">
@@ -96,7 +96,7 @@
 <div class="w-fit mx-auto border rounded-lg border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700 py-5 px-2">
     <Heading id="hubungi" class="mb-5 text-center font-bold text-bsigreen dark:text-bsigreen" tag="h2" color="" customSize="text-2xl">Hubungi Kami</Heading>
     <div class="flex flex-wrap-reverse justify-center w-fit mx-auto">
-        <div class="relative w-screen md:w-[50vw] h-[55vh]">
+        <div class="relative w-[90vw] md:w-[50vw] h-[55vh]">
             <iframe title="evaluasi" class="absolute w-full h-full" src="https://docs.google.com/forms/d/e/1FAIpQLSerwZpzk-TLthhSFN3FjgC_j5fcMuerXBgXplzu9_jPPuCMvg/viewform?embedded=true">Loading…</iframe>
         </div>
         <div class="w-fit px-5 mb-5">
