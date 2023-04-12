@@ -4,6 +4,8 @@
     import Breadcrumbs from '$lib/components/Breadcrumbs.svelte'
     import riki from '$lib/assets/pengembang/riki.jpg'
     import oka from '$lib/assets/pengembang/oka.jpg'
+    import nanda from '$lib/assets/pengembang/nanda.jpg'
+    import fadhilah from '$lib/assets/pengembang/fadhilah.jpg'
 </script>
 
 <Breadcrumbs></Breadcrumbs>
@@ -23,7 +25,7 @@
 
 <div class="flex flex-wrap justify-evenly gap-5 [&>div]:w-60">
     <div class="flex flex-col justify-center text-center px-5 pt-5 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-        <img src="https://as1.ftcdn.net/v2/jpg/01/63/11/70/1000_F_163117064_syJkTuCddASYjvl4WqyRmnuy8cDXpoQY.jpg" alt="foto pengembang"
+        <img src={fadhilah} alt="foto pengembang"
         class="w-40 mb-3 rounded-full border-2 border-bsigreen mx-auto">
         <Heading class="font-bold text-bsidgreen dark:text-bsilgreen" color="" tag="h3" customSize="text-lg">
             Fadhilah Azizah Hasan
@@ -47,7 +49,7 @@
         </a>
     </div>
     <div class="flex flex-col justify-center text-center px-5 pt-5 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-        <img src="https://thumbs.dreamstime.com/b/cute-cat-portrait-square-photo-beautiful-white-closeup-105311158.jpg" alt="foto pengembang"
+        <img src={nanda} alt="foto pengembang"
         class="w-40 mb-3 rounded-full border-2 border-bsigreen mx-auto">
         <Heading class="font-bold text-bsidgreen dark:text-bsilgreen" color="" tag="h3" customSize="text-lg">
             Putri Ayu Ananda
