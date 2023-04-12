@@ -95,12 +95,12 @@
 
 <div class="w-fit mx-auto border rounded-lg border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700 py-5 px-2">
     <Heading id="hubungi" class="mb-5 text-center font-bold text-bsigreen dark:text-bsigreen" tag="h2" color="" customSize="text-2xl">Hubungi Kami</Heading>
-    <div class="flex flex-wrap justify-center w-fit mx-auto">
+    <div class="flex flex-wrap-reverse justify-center w-fit mx-auto">
         <div class="relative w-screen md:w-[50vw] h-[55vh]">
             <iframe title="evaluasi" class="absolute w-full h-full" src="https://docs.google.com/forms/d/e/1FAIpQLSerwZpzk-TLthhSFN3FjgC_j5fcMuerXBgXplzu9_jPPuCMvg/viewform?embedded=true">Loading…</iframe>
         </div>
-        <div class="w-fit px-5">
-            <Heading class="my-10 md:mt-20 mb-1 font-bold text-bsidgreen dark:text-bsilgreen" color="" tag="h4" customSize="text-lg">Email</Heading>
+        <div class="w-fit px-5 mb-5">
+            <Heading class="mt-0 md:mt-20 mb-1 font-bold text-bsidgreen dark:text-bsilgreen" color="" tag="h4" customSize="text-lg">Email</Heading>
             <P>
                 <a class="flex items-center gap-1" href="mailto:magang.bsi2023@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg> magang.bsi2023@gmail.com</a>
