@@ -10,7 +10,6 @@
 	// Dynamic PageNav
     function getAllMateriLink() {
 		let modules = import.meta.glob(`$buku/**`);
-		// console.log(modules)
         
 		let body = [];
 		for (let path in modules) {
@@ -43,7 +42,7 @@
 	{#if getPrevLink() !== undefined}
 	<Button
 		href={getPrevLink()}
-		class="bg-bsiyellow dark:bg-bsiyellow hover:bg-bsidyellow hover:dark:bg-bsidyellow"
+		class="bg-bsigreen dark:bg-bsigreen hover:bg-bsidgreen hover:dark:bg-bsidgreen"
 	>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -59,15 +58,15 @@
 				d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"
 			/>
 		</svg>
-		Materi Sebelumnya
+		Sebelumnya
 	</Button>
 	{/if}
 	{#if getNextLink() !== undefined}
 	<Button
 		href={getNextLink()}
-		class="bg-bsiyellow dark:bg-bsiyellow hover:bg-bsidyellow hover:dark:bg-bsidyellow"
+		class="bg-bsigreen dark:bg-bsigreen hover:bg-bsidgreen hover:dark:bg-bsidgreen"
 	>
-		Materi Selanjutnya
+		Selanjutnya
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="none"

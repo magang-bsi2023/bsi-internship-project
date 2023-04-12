@@ -23,8 +23,6 @@
 		return body;
 	}
 
-    // console.log(getAllMateri());
-
 	function getBookUnit(filter, arr) {
 		return arr.filter(obj => obj.title.charAt(0) === filter);
 	}

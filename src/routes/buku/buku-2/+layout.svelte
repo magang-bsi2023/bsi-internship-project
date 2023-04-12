@@ -12,7 +12,6 @@
 		for (let path in modules) {
 			let pathSanitized = path.replace("/+page.svelte", "").replace("./", "/");
 			let linkPath = (`/buku/${bookPath}` + pathSanitized)
-			console.log(linkPath);
 			body.push({
 				title: pathSanitized.replace("/", "").replace(/-/g, " "),
 				link: linkPath
