@@ -22,7 +22,7 @@
 <Navbar let:hidden let:toggle>
 	<NavBrand href="/">
 		<img src={logo} class="mr-3 h-6 sm:h-10" alt="BSI Logo" />
-		<span class="self-center whitespace-nowrap text-xl font-semibold text-bsiyellow">
+		<span class="self-center whitespace-nowrap text-xl font-semibold text-bsiyellow font-heading">
 			{data.page.title}
 		</span>
 	</NavBrand>
@@ -56,3 +56,10 @@
 		<FooterLink href="/kontak">Kontak</FooterLink>
 	</FooterLinkGroup>
 </Footer>
+
+
+<style global lang="postcss">
+	h1, h2, h3, h3, h4, h5, h6 {
+		font-family: 'lato', 'sans-serif';
+	}
+</style>
