@@ -1,6 +1,10 @@
 <script>
     import { Heading, P } from 'flowbite-svelte';
     import logo from '$lib/assets/logo/bsilib.svg';
+    import bsi from '$lib/assets/bsi-logo/bsi_horizontal_green.svg'
+    import mbkm from '$lib/assets/tentang/kampusmerdeka.png'
+    import msib from '$lib/assets/tentang/msib.png'
+    import msibwhite from '$lib/assets/tentang/msib-white.png'
     import Breadcrumbs from '$lib/components/Breadcrumbs.svelte'
     import riki from '$lib/assets/pengembang/riki.jpg'
     import oka from '$lib/assets/pengembang/oka.jpg'
@@ -21,9 +25,22 @@
     BSI Library merupakan sebuah website edukasi yang didedikasikan untuk mengenalkan dunia perbankan syariah dan Bank Syariah Indonesia. BSI Library menyajikan konten-konten yang berupa buku-buku yang dirangkum ke dalam berbagai media pembelajaran yang menarik, seperti video, animasi, infografis, dan banyak lagi. Diharapkan BSI Library dapat memperluas pengetahuan masyarakat Indonesia tentang perbankan syariah dan meningkatkan kesadaran akan produk dan layanan yang ditawarkan oleh Bank Syariah Indonesia.
 </P>
 
+<div class="flex w-fit mx-auto justify-evenly mb-5 gap-10 items-center py-5 px-10 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+    <div class="w-52"><img class="w-full h-full" src={bsi} alt="logo bsi"></div>
+    <div class="w-52"><img class="w-full h-full" src={mbkm} alt="logo mbkm"></div>
+    <div class="w-52 dark:hidden"><img class="w-full h-full" src={msib} alt="logo msib"></div>
+    <div class="w-52 hidden dark:block"><img class="w-full h-full" src={msibwhite} alt="logo msib"></div>
+</div>
+
+<Heading class="mb-5 text-center font-bold text-bsigreen dark:text-bsigreen" tag="h2" color="" customSize="text-2xl">Latar Belakang</Heading>
+
+<P class="mb-10">
+    BSI Library merupakan proyek akhir yang dihasilkan oleh peserta Magang Merdeka di Bank Syariah Indonesia pada divisi Digital Learning & Multimedia yang ditempatkan di BSI Syariah University (BSU). Divisi Digital Learning & Multimedia dan pengembangan BSI Library dipandu dan dimentori oleh Bapak Taufik Machrus yaitu Dekan Leadership Academy di BSU.
+</P>
+
 <Heading class="mb-5 text-center font-bold text-bsigreen dark:text-bsigreen" tag="h2" color="" customSize="text-2xl">Pengembang</Heading>
 
-<div class="flex flex-wrap justify-evenly gap-5 [&>div]:w-60">
+<div class="flex flex-wrap justify-evenly mb-10 gap-5 [&>div]:w-60">
     <div class="flex flex-col justify-center text-center px-5 pt-5 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
         <img src={fadhilah} alt="foto pengembang"
         class="w-40 mb-3 rounded-full border-2 border-bsigreen mx-auto">
